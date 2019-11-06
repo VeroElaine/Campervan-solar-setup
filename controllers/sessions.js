@@ -28,4 +28,15 @@ router.post('/', (req, res) => {
     });
 });
 
+//destory session
+router.post("/destroy", (req, res) => {
+    req.session.destroy((error) => {
+        if(error){
+            console.log(error);
+        }else {
+            res.redirect("/")
+        }
+    });
+});
+
 module.exports = router;
