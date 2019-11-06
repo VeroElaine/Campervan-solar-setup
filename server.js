@@ -6,6 +6,7 @@ const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const app = express();
 const db = mongoose.connection
+const session = require('express-session');
 require("dotenv").config()
 
 //------------------------
@@ -26,25 +27,37 @@ db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
 db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
-
-
 //------------------------
 // Middleware
 //-----------------------
 // use public folder for static assets
 app.use(express.static("public"))
-// populate req.body with parsed infro from forms
+// populate req.body with parsed info from forms
 app.use(express.urlencoded({ extended: false}))
-
 //be able to use delete and put routes
 app.use(methodOverride("_method"))
+//
+app.use(session({
+    secret:'feedmeseymour',
+    resave:false,
+    saveUninitialized:false
+}));
+
+const solarController = require('./controllers/solar.js');
+app.use('/solar', solarController);
+
+const usersController = require('./controllers/users.js');
+app.use('/users', usersController);
+
+const sessionsController = require('./controllers/sessions.js');
+app.use('/sessions', sessionsController);
 
 
 //------------------------
 // Routes
 //-----------------------
 app.get("/", (req, res) => {
-    res.send("Hello World")
+    res.render("home.ejs")
 })
 
 //------------------------

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Edit Solar Page</h1>
+        <form action="/solar/<%=solar.id%>?_method=PUT" method="POST">
+            applianceName: <input type="text" name="applicancName" value="<%=solar.applianceNamename%>"/><br/>
+            Watts: <input type="text" name="watts" value="<%=solar.watts%>" /><br/>
+            Voltage: <input type="text" name="voltage" value="<%=solar.watts%>" /><br/>
+            amps: <input type="text" name="amps" value="<%=solar.watts%>" /><br/>
+            hourUsage: <input type="text" name="hourUsage" value="<%=solar.watts%>" /><br/>
+            <input type="submit" value="Submit Changes">
+        <form>
+    </body>
+</html>
