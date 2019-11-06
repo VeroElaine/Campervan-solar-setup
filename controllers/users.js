@@ -10,9 +10,12 @@ router.get('/new', (req, res) => {
 router.post('/', (req, res) => {
     req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
     User.create(req.body, (error, createdUser) => {
-        req.session.username = createdUser.username
+        // req.session.username = createdUser.username
+        console.log(error);
+        console.log(createdUser);
+        console.log(req.body);
         res.redirect('/solar');
-    //     console.log(error);
+        // console.log(error);
     })
 });
 

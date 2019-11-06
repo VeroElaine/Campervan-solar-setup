@@ -44,6 +44,7 @@ router.put('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     Solar.create(req.body, (error, createdSolar) => {
+        console.log(error);
         res.redirect('/solar');
     });
 });
@@ -62,6 +63,7 @@ router.get('/', (req, res) => {
     } else {
         res.redirect('/');
     }
+    // res.render("solar/index.ejs")
 });
 
 module.exports = router;

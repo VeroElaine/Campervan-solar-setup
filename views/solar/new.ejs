@@ -6,13 +6,13 @@
     </head>
     <body>
         <h1>New Solar Page</h1>
-        <form action="/solar/<%=solar.id%>?_method=PUT" method="POST">
-            applianceName: <input type="text" name="applicancName" value="<%=solar.applianceNamename%>"/><br/>
-            Watts: <input type="text" name="watts" value="<%=solar.watts%>" /><br/>
-            Voltage: <input type="text" name="voltage" value="<%=solar.watts%>" /><br/>
-            amps: <input type="text" name="amps" value="<%=solar.watts%>" /><br/>
-            hourUsage: <input type="text" name="hourUsage" value="<%=solar.watts%>" /><br/>
-            <input type="submit" value="Create Solar">
-        <form>
+        <form action="/solar" method="POST">
+            applianceName: <input type="text" placeholder="Fridge" name="applianceName"/><br/>
+            Watts: <input type="text" placeholder="300" name="watts"  /><br/>
+            Voltage: <input type="text" placeholder="only fill out if no watts" name="voltage" /><br/>
+            amps: <input type="text" placeholder="only fill out if no watts" name="amps" /><br/>
+            hourUsage: <input type="text" placeholder="ex. 2 or 2.3 or 4" name="hourUsage" /><br/>
+            <input type="submit" value="Create Solar"/>
+        </form>
     </body>
 </html>

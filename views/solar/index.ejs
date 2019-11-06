@@ -1,4 +1,4 @@
-solar<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
@@ -12,11 +12,10 @@ solar<!DOCTYPE html>
         <ul>
             <% for(let i = 0; i < solar.length; i++){ %>
                 <li>
-                    The
                     <a href="/solar/<%=solar[i].id%>">
                         <%=solar[i].applianceName%>
                     </a>
-                    is <%=solar[i].watts%>.
+                    is <%=solar[i].watts%> watts.
                     <% if(solar.watts === "") { %>
                         <%=solar.watts%> = <%=solar.voltage%> x <%=solar.amps%>
                     <% } else { %>
@@ -32,5 +31,8 @@ solar<!DOCTYPE html>
         <nav>
             <a href="/solar/new">Create a new Solar</a>
         </nav>
+        <form action="/sessions/destroy" method="POST">
+            <input type="submit" value="Log Out">
+        </form>
     </body>
 </html>
