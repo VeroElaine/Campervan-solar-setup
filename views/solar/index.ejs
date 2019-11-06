@@ -8,28 +8,48 @@
         <% if(username){ %>
             Welcome, <%=username%>
         <% } %>
-        <ul>
-            <% for(let i = 0; i < solar.length; i++){ %>
-                <li>
-                    <a href="/solar/<%=solar[i].id%>">
-                        <%=solar[i].applianceName%>
-                    </a>
-                    is <%=solar[i].watts%> watts.
-                    <% if(solar.watts === "") { %>
-                        <%=solar.watts%> = <%=solar.voltage%> x <%=solar.amps%>
-                    <% } else { %>
-                        <%=solar.watts%>
-                    <%}%>
-                    <form action="/solar/<%=solar[i].id%>?_method=DELETE" method="POST">
-                        <input type="submit" value="DELETE"/>
-                    </form>
-                    <a href="/solar/<%=solar[i].id%>/edit">Edit</a>
-                </li>
-            <% } %>
-        </ul>
         <nav>
-            <a href="/solar/new">Create a new Solar</a>
+            <button type="button" class="btn btn-primary"<a href="/solar/new">Input New Appliance</a></button>
         </nav>
+        <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Appliance Name</th>
+                    <th>Watts</th>
+                    <th>Voltage</th>
+                    <th>Amps</th>
+                    <th>Hour Usage</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+            <% for(let i = 0; i < solar.length; i++){ %>
+                <tr>
+                    <td><a href="/solar/<%=solar[i].id%>">
+                        <%=solar[i].applianceName%>
+                    </a></td>
+                    <td><%=solar[i].watts%></td>
+                    <td><%=solar[i].voltage%></td>
+                    <td><%=solar[i].amps%></td>
+                    <td><%=solar[i].hourUsage%></td>
+                    <td>
+                        <form action="/solar/<%=solar[i].id%>/edit" method="EDIT">
+                            <input type="submit" value="EDIT"/>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/solar/<%=solar[i].id%>?_method=DELETE" method="POST">
+                            <input type="submit" value="DELETE"/>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+            <% } %>
+        </table>
+        </div>
+
         <form action="/sessions/destroy" method="POST">
             <input type="submit" value="Log Out">
         </form>
