@@ -9,13 +9,13 @@
         <% if(username){ %>
             Welcome, <%=username%>
         <% } %>
-        <div class="solarButtons"
+        <div class="solarButtons">
             <div class="inputData">
                 <button><a href="/solar/new">Input New Appliance</a></button>
             </div>
-            <div class="buildSolar"
+            <div class="buildSolar">
                 <nav>
-                    <a href="/solar/build">Build my own kit</a>
+                    <button><a href="/solar/build">Build my own kit</a></button>
                 </nav>
             </div>
         </div>
@@ -43,13 +43,14 @@
                     <td><%=solar[i].amps%></td>
                     <td><%=solar[i].hourUsage%></td>
                     <td>
-                        <form action="/solar/<%=solar[i].id%>/edit" method="EDIT">
-                            <input type="submit" value="EDIT"/>
+                        <form action="/solar/edit" method="POST">
+                            <button type="submit" id="edit"class="btn btn-default btn-md">EDIT</button>
                         </form>
                     </td>
                     <td>
-                        <form action="/solar/<%=solar[i].id%>?_method=DELETE" method="POST">
-                            <input type="submit" value="DELETE"/>
+                        <form action="/solar/?_method=DELETE" method="POST">
+                            <button type="submit" id="delete" class="btn btn-default btn-md">
+                           <span class="glyphicon glyphicon-trash"></span>Trash</button>
                         </form>
                     </td>
                 </tr>

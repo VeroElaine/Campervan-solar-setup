@@ -1,3 +1,45 @@
 header {
-    background: blue;
+    background: lightblue;
+    height: 7vh;
+}
+.profile a{
+    display: inline-block;
+    margin-top: 2.5%;
+    padding-right: 3%;
+    color: white;
+
+}
+
+.solarButtons{
+    display: flex;
+    flex-direction: row;
+    padding-left: 4%;
+    margin-top: 2%;
+    /* justify-content: space-around; */
+}
+
+.buildSolar{
+    margin-left: 10%;
+}
+.table{
+    margin-top: 4%;
+}
+
+#buy{
+    color: green;
+}
+tr{
+    font-size: 18px;
+}
+#edit{
+    /* background-color: #27AEE3; */
+    background-color: #26abff;
+    color: white;
+}
+#delete{
+    /* background-color:#FF1A00; */
+    /* background-color: #FF0012; */
+    /* background-color: #Df2121; */
+    background-color: #f21515;
+    color: white;
 }
