@@ -25,12 +25,15 @@
                 <tbody>
                     <tr>
                         <td>Battery</td>
-                        <td><button><a href="/solar/battery">Choose Battery</a></button> </td>
+                        <td>
+                            <div class="build-edit">
+                                <button><a href="/solar/battery">Choose Battery</a></button><form action="/solar/edit" method="POST">
+                                <button type="submit" id="edit"class="btn btn-default btn-md">EDIT</button>
+                            </div>
+                         </td>
                         <td>$</td>
                         <td>
-                            <form action="/solar/edit" method="POST">
-                                <button type="submit" id="edit"class="btn btn-default btn-md">EDIT</button>
-                            </form>
+
                         </td>
                         <td>
                             <form action="/solar/?_method=DELETE" method="POST">

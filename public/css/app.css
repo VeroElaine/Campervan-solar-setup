@@ -43,3 +43,11 @@ tr{
     background-color: #f21515;
     color: white;
 }
+#info{
+    color: skyblue;
+}
+.build-edit{
+    display: flex;
+    flex-direction: row;
+
+}
