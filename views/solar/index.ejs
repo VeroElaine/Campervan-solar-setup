@@ -4,6 +4,7 @@
         <% include ../partials/head.ejs %>
     </head>
     <body>
+        <% include ../partials/header.ejs %>
         <h1>Solar Index Page</h1>
         <% if(username){ %>
             Welcome, <%=username%>
@@ -13,7 +14,9 @@
                 <button><a href="/solar/new">Input New Appliance</a></button>
             </div>
             <div class="buildSolar"
-                <p>Already know your power needs?<button>Build your own kit</button></p>
+                <nav>
+                    <a href="/solar/build">Build my own kit</a>
+                </nav>
             </div>
         </div>
         <div class="container">

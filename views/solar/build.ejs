@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <% include ../partials/head.ejs %>
+    </head>
+    <body>
+        <% include ../partials/header.ejs %>
+
+        <h1>Build Page</h1>
+        <div class="container">
+            <p>Are you new to building solar-kits? Check out this battery guide!</p>
+            <h2>Build My Kit</h2>
+            <p>Learn how much each item cost and have the option to buy</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Part</th>
+                        <th>Select</th>
+                        <th>Price</th>
+                        <th></th>
+                        <th></th>
+                        <th>Buy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Battery</td>
+                        <td><button><a href="/solar/battery">Choose Battery</a></button></td>
+                        <td>john@example.com</td>
+                        <td>
+                            <form action="/solar/edit" method="EDIT">
+                                <input type="submit" value="EDIT"/>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/solar/?_method=DELETE" method="POST">
+                                <input type="submit" value="DELETE"/>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Solar Panels</td>
+                        <td><button><a href="/solar/panels">Choose Pannels</a></button></td>
+                        <td>mary@example.com</td>
+                        <td>
+                            <form action="/solar/edit" method="EDIT">
+                                <input type="submit" value="EDIT"/>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/solar/?_method=DELETE" method="POST">
+                                <input type="submit" value="DELETE"/>
+                            </form>
+                        </td>
+                        <td><button><a href="https://www.amazon.com/Renogy-Monocrystalline-Solar-Compact-Design/dp/B07GF5JY35/ref=sr_1_9?keywords=solar+panels&qid=1573102643&sr=8-9">Buy </a></button></td>
+                    </tr>
+                    <tr>
+                        <td>Inverter</td>
+                        <td><button><a href="/solar/inverter">Choose Inverter</a></button></td>
+                        <td>july@example.com</td>
+                        <td>
+                            <form action="/solar/edit" method="EDIT">
+                                <input type="submit" value="EDIT"/>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/solar/?_method=DELETE" method="POST">
+                                <input type="submit" value="DELETE"/>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Charge Control</td>
+                        <td><button><a href="/solar/chargecontrol">Choose Charge Control</a></button></td>
+                        <td>july@example.com</td>
+                        <td>
+                            <form action="/solar/edit" method="POST">
+                                <input type="submit" value="BUY"/>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/solar/?_method=DELETE" method="POST">
+                                <input type="submit" value="DELETE"/>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <nav>
+            <a href="/solar">Back to Home Page</a>
+        </nav>
+        <nav>
+            <a href="/solar/build">Back to My Appliance Table</a>
+        </nav>
+
+    </body>
+</html>

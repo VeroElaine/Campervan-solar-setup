@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <% include ../partials/head.ejs %>
+    </head>
+    <body>
+        <% include ../partials/header.ejs %>
+
+        <h1>Solar Pannels Page</h1>
+        <div class="container">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Part</th>
+                        <th>info</th>
+                        <th>other info</th>
+                        <th>Price</th>
+                        <th>Add</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Veronica Solar Pannel</td>
+                        <td>random specs</td>
+                        <!-- <button><a href="https://www.amazon.com/Renogy-Monocrystalline-Solar-Compact-Design/dp/B07GF5JY35/ref=sr_1_9?keywords=solar+panels&qid=1573102643&sr=8-9">Choose Pannel</a></button> -->
+                        <td>more specs</td>
+                        <td>$</td>
+                        <td>
+                            <form action="/solar/build" method="POST">
+                                <input type="submit" value="Add"/>
+                            </form>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>Jonathan Solar Panel</td>
+                        <td>random specs</td>
+                        <td>more specs</td>
+                        <td>$</td>
+                        <td>
+                            <form action="/solar/build" method="POST">
+                                <input type="submit" value="Add"/>
+                            </form>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>next </td>
+                        <td>more specs</td>
+                        <td>random specs</td>
+                        <td>$</td>
+                        <td>
+                            <form action="/solar/build" method="POST">
+                                <input type="submit" value="Add"/>
+                            </form>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>next </td>
+                        <td>more specs</td>
+                        <td>random specs</td>
+                        <td>$</td>
+                        <td>
+                            <form action="/solar/build" method="POST">
+                                <input type="submit" value="Add"/>
+                            </form>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <nav>
+            <a href="/solar">Back to Home Page</a>
+        </nav>
+        <nav>
+            <a href="/solar">Back to My Appliance Table</a>
+        </nav>
+
+    </body>
+</html>

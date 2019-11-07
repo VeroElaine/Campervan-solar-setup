@@ -6,6 +6,26 @@ router.get('/new', (req, res) => {
     res.render('solar/new.ejs')
 });
 
+router.get('/build', (req, res) => {
+        res.render('solar/build.ejs');
+    });
+
+router.get('/battery', (req, res) => {
+    res.render('solar/battery.ejs');
+});
+
+router.get('/panels', (req, res) => {
+    res.render('solar/panels.ejs');
+});
+
+router.get('/inverter', (req, res) => {
+    res.render('solar/inverter.ejs');
+});
+
+router.get('/chargecontrol', (req, res) => {
+    res.render('solar/chargecontrol.ejs');
+});
+
 router.get('/:id/edit', (req, res) => {
     Solar.findById(req.params.id, (error, foundSolar) => {
         res.render('solar/edit.ejs',{
@@ -48,6 +68,7 @@ router.post('/', (req, res) => {
         res.redirect('/solar');
     });
 });
+
 
 router.get('/', (req, res) => {
     if(req.session.username){
