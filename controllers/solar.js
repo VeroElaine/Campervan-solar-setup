@@ -61,7 +61,16 @@ router.put('/:id', (req, res) => {
         }
     )
 });
-
+// 
+// router.patch("/build/:id/:quantity", (req, res) => {
+//     Product.findByIdAndUpdate(
+//         req.params.id,
+//         { $set: {quantity: req.params.quantity}},
+//         { new: true}, (error, updateModel) => {
+//             res.redirect("/build");
+//         }
+//     )
+// })
 router.post('/', (req, res) => {
     Solar.create(req.body, (error, createdSolar) => {
         console.log(error);

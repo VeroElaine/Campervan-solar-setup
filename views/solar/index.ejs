@@ -43,12 +43,12 @@
                     <td><%=solar[i].amps%></td>
                     <td><%=solar[i].hourUsage%></td>
                     <td>
-                        <form action="/solar/edit" method="POST">
+                        <form action="/solar/<%=solar[i].id%>/edit" method="EDIT">
                             <button type="submit" id="edit"class="btn btn-default btn-md">EDIT</button>
                         </form>
                     </td>
                     <td>
-                        <form action="/solar/?_method=DELETE" method="POST">
+                        <form action="/solar/<%=solar[i].id%>?_method=DELETE" method="POST">
                             <button type="submit" id="delete" class="btn btn-default btn-md">
                            <span class="glyphicon glyphicon-trash"></span>Trash</button>
                         </form>
