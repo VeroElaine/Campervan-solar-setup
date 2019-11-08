@@ -37,9 +37,18 @@ header {
 
 #buy{
     color: green;
+    /* margin-left: 1%; */
+
+}
+#buyIcon{
+    padding-right: 5%;
 }
 tr{
     font-size: 18px;
+}
+#inverIcon, #chargecntrlIcon, #solarpanelIcon, #batteryIcon{
+    padding-right: 4%;
+    /* color: skyblue; */
 }
 #edit{
     /* background-color: #27AEE3; */
