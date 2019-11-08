@@ -80,8 +80,10 @@ router.put('/:id', (req, res) => {
 //     )
 // })
 router.post('/', (req, res) => {
-    Solar.create(req.body, (error, createdSolar) => {
-        console.log(error);
+    let newSolar = {applianceName:req.body.applianceName, watts:req.body.watts, voltage:req.body.voltage, amps:req.body.amps, hourUsage:req.body.hourUsage, username:req.session.username, _id:req.session.userid}
+    Solar.create(newSolar, (error, createdSolar) => {
+        // console.log(createdSolar);
+        // console.log(newSolar);
         res.redirect('/solar');
     });
 });
@@ -89,7 +91,7 @@ router.post('/', (req, res) => {
 
 router.get('/', (req, res) => {
     if(req.session.username){
-        Solar.find({}, (error, allSolar) => {
+        Solar.find({_id:req.session.userid}, (error, allSolar) => {
             res.render(
                 'solar/index.ejs',
                 {

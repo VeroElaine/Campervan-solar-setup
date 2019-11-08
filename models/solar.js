@@ -6,6 +6,8 @@ const solarSchema = new mongoose.Schema({
     voltage: { type: Number},
     amps: { type: Number},
     hourUsage: {type: Number, required: true},
+    username: {type:String, required:true},
+    _id: {type: String, required: true},
 });
 
 const Solar = mongoose.model('Solar', solarSchema);

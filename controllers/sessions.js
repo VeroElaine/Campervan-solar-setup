@@ -20,6 +20,8 @@ router.post('/', (req, res) => {
             console.log(foundUser);
             if(doesPasswordMatch){
                 req.session.username = foundUser.username;
+                // console.log(req.session);
+                req.session.userid = foundUser._id;
                 res.redirect('/solar');
             } else {
                 res.redirect('/sessions/new');
