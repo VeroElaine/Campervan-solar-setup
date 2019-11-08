@@ -28,6 +28,13 @@ header {
     margin-top: 4%;
 }
 
+.homImage{
+    height: 20%;
+    width: 100%;
+    border: 4px solid skyblue;
+    margin-bottom: 3%;
+}
+
 #buy{
     color: green;
 }
@@ -37,7 +44,7 @@ tr{
 #edit{
     /* background-color: #27AEE3; */
     background-color: #26abff;
-    
+
 }
 #edit a{
     color: white;
