@@ -1,12 +1,15 @@
 header {
     background: lightblue;
     height: 7vh;
+    display: flex;
+    flex-direction: row;
 }
-.profile a{
+.profile {
     display: inline-block;
-    margin-top: 2.5%;
+    margin-top: 1%;
     padding-right: 3%;
-    color: white;
+    /* justify-content: flex-end;
+    align-items: flex-end; */
 
 }
 
@@ -34,6 +37,9 @@ tr{
 #edit{
     /* background-color: #27AEE3; */
     background-color: #26abff;
+    
+}
+#edit a{
     color: white;
 }
 #delete{

@@ -17,7 +17,7 @@
                         <th>Part</th>
                         <th>Select</th>
                         <th>Price</th>
-                        <th>+/-</th>
+                        <th>(add/subtract)</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -27,8 +27,11 @@
                         <td>Battery</td>
                         <td>
                             <div class="build-edit">
-                                <button><a href="/solar/battery">Choose Battery</a></button><form action="/solar/edit" method="POST">
-                                <button type="submit" id="edit"class="btn btn-default btn-md">EDIT</button>
+                                <button><a href="/solar/battery">Choose Battery</a></button>
+                                <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">EDIT</button>
+
+                                <!-- <form action="/solar/battery" method="POST">
+                                <button type="submit" id="edit"class="btn btn-default btn-md">EDIT</button> -->
                             </div>
                          </td>
                         <td>$</td>
@@ -50,9 +53,7 @@
                         <td><button><a href="/solar/panels">Choose Pannels</a></button></td>
                         <td>$</td>
                         <td>
-                            <form action="/solar/edit" method="POST">
-                                <button type="submit" id="edit"class="btn btn-default btn-md">EDIT</button>
-                            </form>
+                            <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">EDIT</button>
                         </td>
                         <td>
                             <form action="/solar/?_method=DELETE" method="POST">
@@ -69,9 +70,7 @@
                         <td><button><a href="/solar/inverter">Choose Inverter</a></button></td>
                         <td>$</td>
                         <td>
-                            <form action="/solar/edit" method="POST">
-                                <button type="submit" id="edit"class="btn btn-default btn-md">EDIT</button>
-                            </form>
+                            <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">EDIT</button>
                         </td>
                         <td>
                             <form action="/solar/?_method=DELETE" method="POST">
@@ -88,9 +87,7 @@
                         <td><button><a href="/solar/chargecontrol">Choose Charge Control</a></button> </td>
                         <td>$</td>
                         <td>
-                            <form action="/solar/edit" method="POST">
-                                <button type="submit" id="edit"class="btn btn-default btn-md">EDIT</button>
-                            </form>
+                            <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">EDIT</button>
                         </td>
                         <td>
                             <form action="/solar/?_method=DELETE" method="POST">
@@ -107,7 +104,7 @@
 
         </div>
         <nav>
-            <button type="button" class="btn btn-default btn-sm"><a href="/solar"><span class="glyphicon glyphicon-home"></span>Back to Home Page</a></button>
+            <button type="button" class="btn btn-default btn-sm"><a href="/"><span class="glyphicon glyphicon-home"></span>Back to Home Page</a></button>
         </nav>
 
         <footer>
