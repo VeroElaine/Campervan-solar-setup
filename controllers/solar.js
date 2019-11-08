@@ -26,6 +26,14 @@ router.get('/chargecontrol', (req, res) => {
     res.render('solar/chargecontrol.ejs');
 });
 
+router.get('/buildguide', (req, res) => {
+    res.render('solar/buildguide.ejs');
+});
+
+router.get('/communitybuilds', (req, res) => {
+    res.render('solar/communitybuilds.ejs');
+});
+
 router.get('/:id/edit', (req, res) => {
     Solar.findById(req.params.id, (error, foundSolar) => {
         res.render('solar/edit.ejs',{
@@ -61,7 +69,7 @@ router.put('/:id', (req, res) => {
         }
     )
 });
-// 
+//
 // router.patch("/build/:id/:quantity", (req, res) => {
 //     Product.findByIdAndUpdate(
 //         req.params.id,
