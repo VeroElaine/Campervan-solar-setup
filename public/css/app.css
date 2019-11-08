@@ -1,18 +1,35 @@
 header {
     background: lightblue;
-    height: 7vh;
+    height: 12.5vh;
     display: flex;
     flex-direction: row;
 }
-.profile {
+.imageLogo{
+    height: 60px;
+    width: 60px;
+    /* margin-top: 1.2%; */
+
+}
+#profile {
     display: inline-block;
-    margin-top: 1%;
+    margin-top: 2%;
     padding-right: 3%;
     /* justify-content: flex-end;
     align-items: flex-end; */
+    margin-left: 50%;
 
 }
 
+#contact{
+    height: 30px;
+    width: 30px;
+    /* margin-top: 4%; */
+    /* padding-top: 5%; */
+}
+
+#logout {
+    padding-left: 13%;
+}
 .solarButtons{
     display: flex;
     flex-direction: row;
@@ -34,7 +51,10 @@ header {
     border: 4px solid skyblue;
     margin-bottom: 3%;
 }
-
+#tabs{
+    /* background-color: #FFE01C; */
+    width: 100%;
+}
 #buy{
     color: green;
     /* margin-left: 1%; */

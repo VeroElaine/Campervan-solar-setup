@@ -1,20 +1,45 @@
 <header>
-<nav class="profile">
-    <button type="button" class="btn btn-default"><a href="/sessions/new">Log In</a></button>
-    <!-- <a href="/users/new">Sign up</a> -->
+    <div class="imageLogo">
+        <img class="imageLogo" src="/img/solarLogo.png" alt="">
+        <img class="imageLogo" src="/img/camperLogo.png" alt="">
+    </div>
 
-<!-- if logged in show a logout option or profile -->
-<!-- drop down menu for profile -->
-</nav>
+    <div class="camperLogo">
+        <h1>Campervan Solar Builder</h1>
+    </div>
+    <div class="dropdown" id="profile">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><ion-icon name="contact" id="contact"></ion-icon>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="/sessions/new"> Log In</a></li>
+          <li><a href="/users/new"> Sign Up</a></li>
+          <li>
+              <!-- <a href="/sessions/destroy"> Log Out</a> -->
+              <form action="/sessions/destroy" method="POST">
+              <input id="logout" style="border:none" type="submit" value="Log Out"></>
+            </form>
+        </li>
+          <li class="divider"></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
 
-<nav class="profile">
-    <button type="button" class="btn btn-default"><a href="/users/new">Sign up</a></button>
-</nav>
+    <!-- <nav class="profile">
+        <button type="button" class="btn btn-default"><a href="/sessions/new">Log In</a></button> -->
+        <!-- <a href="/users/new">Sign up</a> -->
+
+    <!-- if logged in show a logout option or profile -->
+    <!-- drop down menu for profile -->
+    <!-- </nav> -->
+
+    <!-- <nav class="profile">
+        <button type="button" class="btn btn-default"><a href="/users/new">Sign up</a></button>
+    </nav>
 
 
-<form class="profile" action="/sessions/destroy" method="POST">
-    <button type="submit" class="btn btn-default">Log Out</button>
-</form>
+    <form class="profile" action="/sessions/destroy" method="POST">
+        <button type="submit" class="btn btn-default">Log Out</button>
+    </form> -->
 
 
-</header>
+    </header>
