@@ -28,7 +28,7 @@ header {
     margin-top: 4%;
 }
 
-.homImage{
+.homeImage{
     height: 20%;
     width: 100%;
     border: 4px solid skyblue;
@@ -44,11 +44,13 @@ tr{
 #edit{
     /* background-color: #27AEE3; */
     background-color: #26abff;
+    color: white;
 
 }
 #edit a{
     color: white;
 }
+
 #delete{
     /* background-color:#FF1A00; */
     /* background-color: #FF0012; */
