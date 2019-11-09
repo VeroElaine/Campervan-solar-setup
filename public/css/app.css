@@ -19,8 +19,16 @@
     margin-top: 20%;
     text-shadow: 1px 1px black;
     font-size: 18px;
-    /* height: 30px;
-    width: 30px; */
+
+}
+input#submit{
+  background:none;
+  border:none;
+  font-size:1em;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-size: 17.5px;
+  margin-top: 20%;
 }
 
 .imageLogo{
@@ -31,26 +39,7 @@
     /* margin-top: 1.2%; */
 
 }
-#profile {
-    display: inline-block;
-    margin-top: 2%;
-    padding-right: 3%;
-    /* justify-content: flex-end;
-    align-items: flex-end; */
-    margin-left: 50%;
 
-}
-
-#contact{
-    height: 30px;
-    width: 30px;
-    /* margin-top: 4%; */
-    /* padding-top: 5%; */
-}
-
-#logout {
-    padding-left: 13%;
-}
 .solarButtons{
     display: flex;
     flex-direction: row;

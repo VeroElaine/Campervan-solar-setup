@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Edit community Page</h1>
+        <form action="/community/<%=community.id%>?_method=PUT" method="POST">
+            Name: <input type="text" name="name" value="<%=community.name%>"/><br/>
+            Image: <input type="text" name="image" value="<%=community.image%>" /><br/>
+            Description: <input type="textarea" name="community.description" >
+
+            <br/>
+            <input type="submit" value="Submit Changes">
+        <form>
+    </body>
+</html>

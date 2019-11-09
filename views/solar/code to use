@@ -1,0 +1,9 @@
+
+on build page once i have a schema or seed data
+<div class="totalCost">
+<% let totalCost = 0 %>
+<% for(let i = 0; i < solar.length; i++){ %>
+    <%totalCost=solar[i].cost + totalCost%>
+    <% } %>
+    Total: $<%=totalCost%>
+</div>
