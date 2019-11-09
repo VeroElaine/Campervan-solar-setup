@@ -40,6 +40,14 @@ input#submit{
 
 }
 
+.item{
+    width: 100%;
+}
+#item{
+    width: 60%;
+    height: 60%;
+}
+
 .solarButtons{
     display: flex;
     flex-direction: row;
