@@ -52,6 +52,9 @@ app.use('/users', usersController);
 const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
 
+const communityController = require("./controllers/communitybuilds.js");
+app.use("/community", communityController);
+
 
 //------------------------
 // Routes

@@ -1,12 +1,33 @@
-header {
+#header{
     background: lightblue;
-    height: 12.5vh;
-    display: flex;
-    flex-direction: row;
+    border: 2px solid black;
+
 }
+.headTitle{
+    text-shadow: 2px 2px black;
+}
+.solar{
+    color: #FFE01C;
+}
+.title{
+    margin-left: 20%;
+    color: white;
+    margin-top: -15%;
+}
+#headNav{
+    color: white;
+    margin-top: 20%;
+    text-shadow: 1px 1px black;
+    font-size: 18px;
+    /* height: 30px;
+    width: 30px; */
+}
+
 .imageLogo{
-    height: 60px;
+    height: 55px;
     width: 60px;
+    margin-left: -4%;
+    margin-top: -1%;
     /* margin-top: 1.2%; */
 
 }

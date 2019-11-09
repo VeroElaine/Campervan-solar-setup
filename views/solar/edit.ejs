@@ -5,7 +5,8 @@
     </head>
     <body>
         <% include ../partials/header.ejs %>
-
+        <% include ../partials/tabs.ejs %>
+        
         <h1>Edit Solar Page</h1>
         <form action="/solar/<%=solar.id%>?_method=PUT" method="POST">
             applianceName: <input type="text" name="applianceName" value="<%=solar.applianceName%>"/><br/>
@@ -16,6 +17,6 @@
             <input type="submit" value="Submit Changes">
         <form>
 
-    
+
     </body>
 </html>

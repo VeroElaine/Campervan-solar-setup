@@ -80,18 +80,23 @@ router.put('/:id', (req, res) => {
 //     )
 // })
 router.post('/', (req, res) => {
-    let newSolar = {applianceName:req.body.applianceName, watts:req.body.watts, voltage:req.body.voltage, amps:req.body.amps, hourUsage:req.body.hourUsage, username:req.session.username, _id:req.session.userid}
+    let newSolar = {applianceName:req.body.applianceName, watts:req.body.watts, voltage:req.body.voltage, amps:req.body.amps, hourUsage:req.body.hourUsage, username:req.session.username, userid:req.session.userid}
     Solar.create(newSolar, (error, createdSolar) => {
-        // console.log(createdSolar);
-        // console.log(newSolar);
         res.redirect('/solar');
     });
 });
 
+// router.post("/build", (req, res) => {
+//     Solar.create(build, (error, createdBuild) => {
+//         res.redirect("/solar/build")
+//     })
+// })
+
+
 
 router.get('/', (req, res) => {
     if(req.session.username){
-        Solar.find({_id:req.session.userid}, (error, allSolar) => {
+        Solar.find({userid:req.session.userid}, (error, allSolar) => {
             res.render(
                 'solar/index.ejs',
                 {

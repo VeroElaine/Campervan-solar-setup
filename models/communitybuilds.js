@@ -6,6 +6,6 @@ const userSchema = new mongoose.Schema({
     text: {type:String, required:true},
 });
 
-const User = mongoose.model('User', userSchema);
+const Community = mongoose.model('Community', userSchema);
 
-module.exports  = User;
+module.exports  = Community;
