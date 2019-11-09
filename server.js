@@ -7,7 +7,9 @@ const mongoose = require("mongoose");
 const app = express();
 const db = mongoose.connection
 const session = require('express-session');
-require("dotenv").config()
+require("dotenv").config();
+
+
 
 //------------------------
 // Port
@@ -38,7 +40,7 @@ app.use(express.urlencoded({ extended: false}))
 app.use(methodOverride("_method"))
 //
 app.use(session({
-    secret:'feedmeseymour',
+    secret:'randomString',
     resave:false,
     saveUninitialized:false
 }));

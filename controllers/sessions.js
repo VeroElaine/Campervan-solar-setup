@@ -10,18 +10,15 @@ router.get('/new', (req, res) => {
 router.post('/', (req, res) => {
     // console.log(req.body);
     User.findOne({username:req.body.username}, (error,foundUser) => {
-        console.log(error);
-        console.log(foundUser);
         if(foundUser === null){
             res.redirect('/sessions/new');
         } else {
             const doesPasswordMatch = bcrypt.compareSync(req.body.password, foundUser.password);
-            console.log(req.body);
-            console.log(foundUser);
             if(doesPasswordMatch){
                 req.session.username = foundUser.username;
                 // console.log(req.session);
                 req.session.userid = foundUser._id;
+                console.log(foundUser);
                 res.redirect('/solar');
             } else {
                 res.redirect('/sessions/new');

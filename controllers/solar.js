@@ -81,7 +81,11 @@ router.put('/:id', (req, res) => {
 // })
 router.post('/', (req, res) => {
     let newSolar = {applianceName:req.body.applianceName, watts:req.body.watts, voltage:req.body.voltage, amps:req.body.amps, hourUsage:req.body.hourUsage, username:req.session.username, userid:req.session.userid}
+    console.log(req.body);
+    console.log(req.session);
     Solar.create(newSolar, (error, createdSolar) => {
+        console.log(error);
+        console.log(createdSolar);
         res.redirect('/solar');
     });
 });
