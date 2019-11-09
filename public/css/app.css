@@ -124,6 +124,55 @@ footer{
     height: 10%;
     width: 10%;
 }
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  transition: 0.3s;
+
+
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+}
+
+/* Add some padding inside the card container */
+.allCards {
+  padding: 2px 16px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+/* .allCards{
+    display: flex;
+    width: 100%;
+
+}
+.card{
+    margin: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    min-width: 40%;
+    border-radius: 5px;
+    margin-bottom: 10%;
+
+}
+
+.card-text{
+    min-height: 40px;
+
+}
+.card:hover{
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+} */
+
+
+
 /* .logo{
     width: 10%;
     display: flex;
