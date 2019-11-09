@@ -128,8 +128,9 @@ footer{
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
   transition: 0.3s;
-
-
+  /* padding-left: 40px; */
+  width: 35rem;
+  height: 35rem;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -137,10 +138,13 @@ footer{
   cursor: pointer;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
 }
+.text-center{
+    /* margin-left: 150%; */
+}
 
 /* Add some padding inside the card container */
 .allCards {
-  padding: 2px 16px;
+  padding: 2px 26px;
   display: flex;
   justify-content: space-around;
   margin-bottom: 10%;
