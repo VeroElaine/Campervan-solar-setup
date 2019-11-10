@@ -7,10 +7,11 @@
         <% include ../partials/header.ejs %>
         <% include ../partials/tabs.ejs %>
 
-        <h1>Solar Index Page</h1>
-        <% if(username){ %>
+        <h1>My Appliance Data</h1>
+        <h2><% if(username){ %>
             Welcome, <%=username%>
         <% } %>
+        </h2>
         <div class="solarButtons">
             <div class="inputData">
                 <button><a href="/solar/new">Input New Appliance</a></button>
@@ -22,7 +23,7 @@
             </div>
         </div>
         <br>
-        <p>*If you don't know the watts, input the voltage AND amps and the table will calculate it for you.</p>
+        <p>*If you don't know the watts leave filed empty, input the voltage AND amps and the table will calculate it for you.</p>
 
         <div class="container">
         <table class="table table-hover">
@@ -85,14 +86,21 @@
                 <%wattHours=(solar[i].watts * solar[i].hourUsage) + wattHours%>
                 <% } %>
                 <p class="calculations">
-                Total Watts: <%=totalWatts + calcWatts%> Watts <br>
-                Total Amp Hours for 12V System: <%=Math.ceil((wattHours + calcWattHours)/12)%> Amp hours <br>
-                Reccomended Battery bank for 12v system = <%=Math.ceil((wattHours + calcWattHours)/12)*2%> Amp hours. Buy <%=Math.ceil((Math.ceil((wattHours + calcWattHours)/12)*2)/100)%>-100 AmpHours Batteries <br><br>
-
-
-                Total Amp Hours for 24V System: <%=Math.ceil((wattHours + calcWattHours)/24)%> Amp hours <br>
-                Reccomended Battery bank for 24v system = <%=Math.ceil((wattHours + calcWattHours)/24)*2%> Amp hours. Buy <%=Math.ceil((Math.ceil((wattHours + calcWattHours)/24)*2)/100)%>-100 AmpHours Batteries <br> <br>
-            </p>
+                    Total Watts: <%=totalWatts + calcWatts%> Watts <br>
+                    Total Amp Hours for 12V System: <%=Math.ceil((wattHours + calcWattHours)/12)%> Amp hours <br>
+                    Reccomended Battery bank for 12v system = <%=Math.ceil((wattHours + calcWattHours)/12)*2%> Amp hours. Buy <%=Math.ceil((Math.ceil((wattHours + calcWattHours)/12)*2)/100)%>-100 AmpHours Batteries <br><br>
+                </p>
+                <!-- A link that will show the calcuations for a 24V system -->
+                <div class="diffSystem">
+                    <a href="#" data-toggle="popover" data-trigger="focus" title="24V System" data-content="Total Amp Hours for 24V System: <%=Math.ceil((wattHours + calcWattHours)/24)%> Amp hours 
+                    Reccomended Battery bank for 24v system = <%=Math.ceil((wattHours + calcWattHours)/24)*2%> Amp hours. Buy <%=Math.ceil((Math.ceil((wattHours + calcWattHours)/24)*2)/100)%>-100 AmpHours Batteries">24V System Conversion</a>
+                  </div>
+                  <script>
+                  $(document).ready(function(){
+                      $('[data-toggle="popover"]').popover();
+                  });
+                  </script>
+                </div>
 
             <div class="modalContainer">
 

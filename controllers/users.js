@@ -12,7 +12,7 @@ router.get('/new', (req, res) => {
 });
 
 //username already taken
-router.get("/new/wrong", (req, res) => {
+router.get("/new/usernametaken", (req, res) => {
     res.render("users/new.ejs", {
         usernameTaken:true
     });
@@ -26,7 +26,7 @@ router.post('/', (req, res) => {
       req.session.userid = createdUser._id;
       res.redirect('/solar')
     } else {
-       res.redirect('/users/new/wrong')
+       res.redirect('/users/new/usernametaken')
     }
   })
 })

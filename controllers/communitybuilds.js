@@ -5,27 +5,33 @@ const router = express.Router();
 router.get('/new', (req, res) => {
     res.render('community/new.ejs')
 });
-router.post('/', (req, res) => {
-    Community.create(req.body, (error, createdCommunity) => {
-        res.redirect('/community');
 
-    });
+router.post('/', (req, res) => {
+    if(req.session.username){
+    Community.create(req.body, (error, createdCommunity) => {
+        res.redirect('/community', {
+            username:req.session.username
+        });
+    })
+    }else {
+        res.redirect('/');
+    }
 });
 
 router.get('/', (req, res) => {
-    if(req.session.username){
+    // if(req.session.username){
         Community.find({}, (error, allCommunity) => {
             res.render(
                 'community/index.ejs',
                 {
                     community:allCommunity,
-                    username:req.session.username
+                    // username:req.session.username
                 }
             );
         })
-    } else {
-        res.redirect('/');
-    }
+    // } else {
+    //     res.redirect('/');
+    // }
 });
 
 

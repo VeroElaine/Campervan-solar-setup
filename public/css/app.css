@@ -306,3 +306,8 @@ footer{
 .error {
     color: red
 }
+
+.diffSystem{
+    border: 3px;
+    margin-bottom: 5%;
+}

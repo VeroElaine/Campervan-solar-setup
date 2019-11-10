@@ -10,7 +10,7 @@ router.get('/new', (req, res) => {
     });
 });
 //wrongInput
-router.get("/new/wrong", (req, res) => {
+router.get("/new/wronginput", (req, res) => {
     res.render("sessions/new.ejs", {
         wrongInput:true
     });
@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
     User.findOne({username:req.body.username}, (error,foundUser) => {
         if(foundUser === null){
             // wrongInput = true;
-            res.redirect('/sessions/new/wrong');
+            res.redirect('/sessions/new/wronginput');
         } else {
             const doesPasswordMatch = bcrypt.compareSync(req.body.password, foundUser.password);
             if(doesPasswordMatch){
@@ -30,7 +30,7 @@ router.post('/', (req, res) => {
                 res.redirect('/solar');
             } else {
                 // wrongInput = true;
-                res.redirect('/sessions/new/wrong');
+                res.redirect('/sessions/new/wronginput');
             }
         }
     });
