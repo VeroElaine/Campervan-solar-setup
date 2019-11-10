@@ -3,11 +3,20 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 const User = require('../models/users.js');
 
-usernameTaken = false;
 
 router.get('/new', (req, res) => {
-    res.render('users/new.ejs');
-})
+    res.render('users/new.ejs', {
+        usernameTaken:false
+    });
+
+});
+
+//username already taken
+router.get("/new/wrong", (req, res) => {
+    res.render("users/new.ejs", {
+        usernameTaken:true
+    });
+});
 
 router.post('/', (req, res) => {
     req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
@@ -17,8 +26,7 @@ router.post('/', (req, res) => {
       req.session.userid = createdUser._id;
       res.redirect('/solar')
     } else {
-        usernameTaken = true
-       res.redirect('/users/new')
+       res.redirect('/users/new/wrong')
     }
   })
 })

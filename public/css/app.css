@@ -95,11 +95,6 @@ input#submit{
     margin-bottom: 3%;
 }
 
-.allCommunityCards{
-    display: flex;
-    /* flex-direction: row; */
-    flex-wrap: wrap;
-}
 .cards {
    display: flex;
    justify-content: space-between;
@@ -201,12 +196,37 @@ footer{
     margin-left: 13%;
 
 }
+
+.allCommunityCards{
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 5%;
+    /* margin-bottom: 5%; */
+    /* padding: 10%; */
+}
+/* community card */
+.card{
+    padding-top: 0;
+
+}
 .cardCommunityBody{
     position: relative;
-    bottom: -15px;
+    /* padding-bottom: 0; */
+    bottom: -10px;
     /* color: white; */
 }
 .cardCommunityText{
+    color: white;
+
+}
+#communityShare{
+    color: white;
+    text-decoration: none;
+}
+/* community icon */
+#communityP{
     color: white;
 }
 #text{
