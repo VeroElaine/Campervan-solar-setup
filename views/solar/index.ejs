@@ -23,6 +23,7 @@
         </div>
         <br>
         <p>*If you don't know the watts, input the voltage AND amps and the table will calculate it for you.</p>
+
         <div class="container">
         <table class="table table-hover">
             <thead>
@@ -77,19 +78,19 @@
                 <% } %>
 
                 <br>
-        <% let totalWatts = 0 %>
-        <% let wattHours = 0 %>
-        <% for(let i = 0; i < solar.length; i++){ %>
-            <%totalWatts=solar[i].watts + totalWatts%>
-            <%wattHours=(solar[i].watts * solar[i].hourUsage) + wattHours%>
-            <% } %>
-            Total Watts: <%=totalWatts + calcWatts%> Watts <br>
-            Total Amp Hours for 12V System: <%=Math.ceil((wattHours + calcWattHours)/12)%> Amp hours <br>
-            Reccomended Battery bank for 12v system = <%=Math.ceil((wattHours + calcWattHours)/12)*2%> Amp hours. Buy <%=Math.ceil((Math.ceil((wattHours + calcWattHours)/12)*2)/100)%>-100 AmpHours Batteries <br><br>
+            <% let totalWatts = 0 %>
+            <% let wattHours = 0 %>
+            <% for(let i = 0; i < solar.length; i++){ %>
+                <%totalWatts=solar[i].watts + totalWatts%>
+                <%wattHours=(solar[i].watts * solar[i].hourUsage) + wattHours%>
+                <% } %>
+                Total Watts: <%=totalWatts + calcWatts%> Watts <br>
+                Total Amp Hours for 12V System: <%=Math.ceil((wattHours + calcWattHours)/12)%> Amp hours <br>
+                Reccomended Battery bank for 12v system = <%=Math.ceil((wattHours + calcWattHours)/12)*2%> Amp hours. Buy <%=Math.ceil((Math.ceil((wattHours + calcWattHours)/12)*2)/100)%>-100 AmpHours Batteries <br><br>
 
 
-            Total Amp Hours for 24V System: <%=Math.ceil((wattHours + calcWattHours)/24)%> Amp hours <br>
-            Reccomended Battery bank for 24v system = <%=Math.ceil((wattHours + calcWattHours)/24)*2%> Amp hours. Buy <%=Math.ceil((Math.ceil((wattHours + calcWattHours)/24)*2)/100)%>-100 AmpHours Batteries <br> <br>
+                Total Amp Hours for 24V System: <%=Math.ceil((wattHours + calcWattHours)/24)%> Amp hours <br>
+                Reccomended Battery bank for 24v system = <%=Math.ceil((wattHours + calcWattHours)/24)*2%> Amp hours. Buy <%=Math.ceil((Math.ceil((wattHours + calcWattHours)/24)*2)/100)%>-100 AmpHours Batteries <br> <br>
 
 
             <!-- (To find the right amount of batteries (if using agm) it is best to double up the capacity of the battery bank (which is amp hours)) to avoid going below 50% of battery bank- which reduces lifespan of batteries <br>
@@ -97,84 +98,72 @@
             * if watts are unknown watts = voltage times amps <br>
             *amp hours are watts times hours of usage divided by voltage of batteries. <br> -->
 
-
             <div class="modalContainer">
 
               <!-- Trigger the modal with a button -->
               <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Learn about the calculations!</button>
-
               <!-- Modal -->
               <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
-
                   <!-- Modal content-->
                   <div class="modal-content">
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal">&times;</button>
                       <h4 class="modal-title">Watts and Amp Hours</h4>
-                    </div>
-                    <div class="modal-body">
-                      <p>
-                          * if watts are known watts = watts <br>
-                          * if watts are unknown watts = voltage times amps <br>
-                          * amp hours are watts times hours of usage divided by voltage of batteries. <br>
-                            * i.e (100watts * 2 hours)/12V <br>
-                          * Battery bank is double the amp hours.
-                          * Suggested batteries are based on 100amp hour batteries. So (double amp hours / 100) = amount of batteries
-                      </p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-
-        </div>
-
-
-
-                <div class="modalContainer">
-
-                  <!-- Trigger the modal with a button -->
-                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Learn about the battery bank!</button>
-
-                  <!-- Modal -->
-                  <div class="modal fade" id="myModal" role="dialog">
-                    <div class="modal-dialog">
-
-                      <!-- Modal content-->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          <h4 class="modal-title">Battery Bank</h4>
                         </div>
                         <div class="modal-body">
-                          <p> A battery bank is simply a set of batteries connected together in a certain way to provide the needed power. The needed power is based on the amp hours you require for your daily appliance usage. <br>
-
-                            To find the right amount of batteries-if going with AGM- it is best to double up the capacity of the battery bank to avoid going below 50% of battery bank. You want to avoid going below 50% because this will reduce the lifespan of batteries. T  <br>
-                            </p>
+                          <p>
+                              * if watts are known watts = watts <br>
+                              * if watts are unknown watts = voltage times amps <br>
+                              * amp hours are watts times hours of usage divided by voltage of batteries. <br>
+                                * i.e (100watts * 2 hours)/12V <br>
+                              * Battery bank is double the amp hours.
+                              * Suggested batteries are based on 100amp hour batteries. So (double amp hours / 100) = amount of batteries
+                          </p>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
                       </div>
-
                     </div>
                   </div>
-
                 </div>
+
+                <!-- <div class="modalContainer"> -->
+
+                  <!-- Trigger the modal with a button -->
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Learn about the battery bank!</button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal2" role="dialog">
+                    <div class="modal-dialog">
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Battery Bank</h4>
+                            </div>
+                            <div class="modal-body">
+                              <p>
+                                  A battery bank is simply a set of batteries connected together in a certain way to provide the needed power. The needed power is based on the amp hours you require for your daily appliance usage. <br>
+
+                                  To find the right amount of batteries-if going with AGM- it is best to double up the capacity of the battery bank to avoid going below 50% of battery bank. You want to avoid going below 50% because this will reduce the lifespan of batteries.
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- </div> -->
 
 
             </div>
-          </div>
+
+
 
         </div>
 
-        </div>
 
 
         <nav>
