@@ -12,6 +12,7 @@ router.post('/', (req, res) => {
     // console.log(req.body);
     User.findOne({username:req.body.username}, (error,foundUser) => {
         if(foundUser === null){
+            wrongInput = true;
             res.redirect('/sessions/new');
         } else {
             const doesPasswordMatch = bcrypt.compareSync(req.body.password, foundUser.password);
@@ -19,7 +20,6 @@ router.post('/', (req, res) => {
                 req.session.username = foundUser.username;
                 // console.log(req.session);
                 req.session.userid = foundUser._id;
-                console.log(foundUser);
                 res.redirect('/solar');
             } else {
                 wrongInput = true;

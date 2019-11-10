@@ -9,7 +9,7 @@
 
 <h1>Log in</h1>
 <%if(wrongInput){%>
-        <span class="error">Username and Password do note match</span>
+        <span class="error">Username and Password do not match</span>
       <%}%>
         <form action="/sessions" method="POST">
             Username:<input type="text" name="username" /><br/>
@@ -17,6 +17,7 @@
             <!-- put in if statement that says username and password do not match -->
             <input type="submit" value="Log In">
         </form>
+
         <footer>
             <% include ../partials/footer.ejs %>
         </footer>

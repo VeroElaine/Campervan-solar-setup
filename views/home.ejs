@@ -7,8 +7,14 @@
         <% include partials/header.ejs %>
         <% include partials/tab1.ejs %>
 
-        <div>
+        <div class="homeImageContainer">
             <img class="homeImage" src="/img/campervan.jpeg" alt="beach campervan">
+            <div id="top-left" class="carousel-caption">Build Your Custom Solar Panel Kit</div>
+            <div id="middle-left" class="carousel-caption">Input your appliances - Get reccomended batteries - Compare Parts - Buy Your Kit</div>
+            <div id="bottom-left" class="carousel-caption"><button type="button"> <a href="/users/ner"></a>Get Started</button></div>
+
+
+            </div>
         </div>
 
         <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel"> -->
@@ -23,25 +29,27 @@
               <!-- Wrapper for slides -->
               <div class="carousel-inner">
                 <div class="item active">
-                  <img id="item" src="img/setupGuide.png" alt="Los Angeles">
+                  <img id="item" src="img/solarVan.png" alt="campervan solar setup">
                   <div class="carousel-caption">
-                      <h3>Solar Build</h3>
-                      <p>Solar Building is fun!</p>
+                      <h1>Sign up to be guided on your campervan solar build!</h1>
+                      <p><button id="homeSignup"><a href="/users/new">Sign Up</a></button>
+                      </p>
                   </div>
                 </div>
 
                 <div class="item">
                   <img id="item" src="img/solarGuide.png" alt="Chicago">
                   <div class="carousel-caption">
-                      <h3>Solar Build</h3>
-                      <p>Solar Building is fun!</p>
+                      <h1>Solar Building is fun! Login to see community Posts</h1>
+                      <p><button id="homeSignup"><a href="/sessions/new">Login</a></button>
+
                   </div>
                 </div>
 
                 <div class="item">
-                  <img id="item" src="img/solarVan.png" alt="New York">
+                  <img id="item" src="img/setupGuide.png" alt="New York">
                   <div class="carousel-caption">
-                      <h3>Solar Build</h3>
+                      <h1>Solar Build</h1>
                       <p>Solar Building is fun!</p>
                   </div>
                 </div>
