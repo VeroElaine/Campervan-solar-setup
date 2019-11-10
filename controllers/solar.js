@@ -84,8 +84,6 @@ router.post('/', (req, res) => {
     console.log(req.body);
     console.log(req.session);
     Solar.create(newSolar, (error, createdSolar) => {
-        console.log(error);
-        console.log(createdSolar);
         res.redirect('/solar');
     });
 });
