@@ -178,7 +178,9 @@ footer{
 }
 .cardImage{
     position: relative;
-    width: 100%;
+    width: 70%;
+    margin-top: 10%;
+    margin-left: 13%;
 
 }
 .cardCommunityBody{
@@ -199,7 +201,8 @@ footer{
 }
 
 #item{
-    width: 100%;
+    width: 70%;
+    margin-left: 13%;
 }
 .carousel-caption{
     font-size: 40px;
@@ -246,8 +249,8 @@ footer{
     color: #62c4ff;
 }
 .homePageText{
-    margin-top: 10%;
-    margin-bottom: 3%;
+    margin-top: 6%;
+    margin-bottom: 4%;
     text-align: center;
     color: lightgray;
     font-weight: bold;
