@@ -6,16 +6,14 @@
     <body>
         <% include partials/header.ejs %>
         <% include partials/tab1.ejs %>
-
-        <div class="homeImageContainer">
-            <img class="homeImage" src="/img/campervan.jpeg" alt="beach campervan">
-            <div id="top-left" class="carousel-caption">Build Your Custom Solar Panel Kit</div>
-            <div id="middle-left" class="carousel-caption">Input your appliances - Get reccomended batteries - Compare Parts - Buy Your Kit</div>
-            <div id="bottom-left" class="carousel-caption"><button type="button"> <a href="/users/ner"></a>Get Started</button></div>
-
-
+        <div class="container-fluid">
+            <div class="homeImageContainer">
+                <img class="homeImage" src="/img/campervan.jpeg" alt="beach campervan">
+                <div id="top-left" class="carousel-caption">Build Your Custom Solar Panel Kit</div>
+                <div id="middle-left" class="carousel-caption">Input your appliances - Get reccomended batteries - Compare Parts - Buy Your Kit</div>
+                <div id="bottom-left" class="carousel-caption"><button type="button"> <a href="/users/ner"></a>Get Started</button></div>
             </div>
-        </div>
+         </div>
 
         <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel"> -->
          <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3500" data-pause="hover">
@@ -38,7 +36,7 @@
                 </div>
 
                 <div class="item">
-                  <img id="item" src="img/solarGuide.png" alt="Chicago">
+                  <img id="item" src="img/solarGuide.png" alt="solar guide">
                   <div class="carousel-caption">
                       <h1>Solar Building is fun! Login to see community Posts</h1>
                       <p><button id="homeSignup"><a href="/sessions/new">Login</a></button>
@@ -47,10 +45,10 @@
                 </div>
 
                 <div class="item">
-                  <img id="item" src="img/setupGuide.png" alt="New York">
+                  <img id="item" src="img/setupGuide.png" alt="setup guide">
                   <div class="carousel-caption">
-                      <h1>Solar Build</h1>
-                      <p>Solar Building is fun!</p>
+                      <h1>Forget the Generator</h1>
+                      <p>Go Green and use Solar Energy </p>
                   </div>
                 </div>
               </div>
@@ -65,6 +63,24 @@
                 <span class="sr-only">Next</span>
               </a>
             </div>
+
+            <div class="cardImage">
+
+                <img class="card-img-top" src="img/panels.png" alt="solar panels">
+                <div class="card-body">
+                    <div id="text" class="caption text-center">
+                        <h3 class="card-title">Learn to Build a Solar Kit</h3>
+                        <p class="card-text">
+                            Are you new to building custom computers or just not sure where to start? Check out our build guide where we run you through the essentials of how to pick the right parts and build your kit.
+                        <div><a href="solar/buildguide" class="btn btn-primary">Learn More</a></div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <h1 class="homePageText">Learn More About Solar Panels</h1>
 
 
             <div class="allCards">
