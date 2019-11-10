@@ -242,7 +242,8 @@ footer{
     left: -35%;
     color: white;
     font-size: 40px;
-    text-shadow: 1px 1px 2px black;
+    text-shadow: 3px 3px 4px black;
+    color: white;
     /* text-shadow: 1px 1px 2px #FFE01C */
 
 
@@ -260,8 +261,9 @@ footer{
     top: 55%;
     left: -40%;
     font-size: 25px;
-    color: #62c4ff;
+    color: black;
 }
+
 .homePageText{
     margin-top: 6%;
     margin-bottom: 4%;
