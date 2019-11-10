@@ -7,10 +7,10 @@
         <% include ../partials/header.ejs %>
         <% include ../partials/tabs.ejs %>
 
-<!-- <div class="loginImage">
-    <img src="" alt="">
-</div> -->
 <h1>Log in</h1>
+<%if(wrongInput){%>
+        <span class="error">Username and Password do note match</span>
+      <%}%>
         <form action="/sessions" method="POST">
             Username:<input type="text" name="username" /><br/>
             Password:<input type="password" name="password" /><br/>

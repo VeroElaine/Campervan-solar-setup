@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 const User = require('../models/users.js');
 
+usernameTaken = false;
 
 router.get('/new', (req, res) => {
     res.render('users/new.ejs');
@@ -16,7 +17,7 @@ router.post('/', (req, res) => {
       req.session.userid = createdUser._id;
       res.redirect('/solar')
     } else {
-        // res.send("A user with that username already exists. Try a different one.");
+        usernameTaken = true
        res.redirect('/users/new')
     }
   })

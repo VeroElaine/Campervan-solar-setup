@@ -84,6 +84,7 @@
                 <%totalWatts=solar[i].watts + totalWatts%>
                 <%wattHours=(solar[i].watts * solar[i].hourUsage) + wattHours%>
                 <% } %>
+                <p class="calculations">
                 Total Watts: <%=totalWatts + calcWatts%> Watts <br>
                 Total Amp Hours for 12V System: <%=Math.ceil((wattHours + calcWattHours)/12)%> Amp hours <br>
                 Reccomended Battery bank for 12v system = <%=Math.ceil((wattHours + calcWattHours)/12)*2%> Amp hours. Buy <%=Math.ceil((Math.ceil((wattHours + calcWattHours)/12)*2)/100)%>-100 AmpHours Batteries <br><br>
@@ -91,12 +92,7 @@
 
                 Total Amp Hours for 24V System: <%=Math.ceil((wattHours + calcWattHours)/24)%> Amp hours <br>
                 Reccomended Battery bank for 24v system = <%=Math.ceil((wattHours + calcWattHours)/24)*2%> Amp hours. Buy <%=Math.ceil((Math.ceil((wattHours + calcWattHours)/24)*2)/100)%>-100 AmpHours Batteries <br> <br>
-
-
-            <!-- (To find the right amount of batteries (if using agm) it is best to double up the capacity of the battery bank (which is amp hours)) to avoid going below 50% of battery bank- which reduces lifespan of batteries <br>
-            * if watts are known watts = watts <br>
-            * if watts are unknown watts = voltage times amps <br>
-            *amp hours are watts times hours of usage divided by voltage of batteries. <br> -->
+            </p>
 
             <div class="modalContainer">
 

@@ -174,11 +174,10 @@ footer{
 .modalContainer{
     display: inline;
     /* margin-left: 20%; */
-
 }
-
-/* .logo{
-    width: 10%;
-    display: flex;
-    flex-direction: row;
-} */
+.calculations{
+    font-size: 17px;
+}
+.error {
+    color: red
+}

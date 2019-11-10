@@ -3,6 +3,7 @@ const router = express.Router();
 const User = require('../models/users.js');
 const bcrypt = require('bcrypt');
 
+wrongInput = false;
 router.get('/new', (req, res) => {
     res.render('sessions/new.ejs');
 });
@@ -21,6 +22,7 @@ router.post('/', (req, res) => {
                 console.log(foundUser);
                 res.redirect('/solar');
             } else {
+                wrongInput = true;
                 res.redirect('/sessions/new');
             }
         }
