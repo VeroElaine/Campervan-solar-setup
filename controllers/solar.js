@@ -2,6 +2,12 @@ const express = require('express');
 const Solar = require('../models/solar.js');
 const router = express.Router();
 
+router.get("/test", (req, res) => {
+    Solar.find({}, (error, solar) => {
+        res.send(solar)
+    })
+})
+
 router.get('/new', (req, res) => {
     res.render('solar/new.ejs')
 });
@@ -81,8 +87,8 @@ router.put('/:id', (req, res) => {
 // })
 router.post('/', (req, res) => {
     let newSolar = {applianceName:req.body.applianceName, watts:req.body.watts, voltage:req.body.voltage, amps:req.body.amps, hourUsage:req.body.hourUsage, username:req.session.username, userid:req.session.userid}
-    console.log(req.body);
-    console.log(req.session);
+    // console.log(req.body);
+    // console.log(req.session);
     Solar.create(newSolar, (error, createdSolar) => {
         res.redirect('/solar');
     });

@@ -7,7 +7,6 @@ const solarSchema = new mongoose.Schema({
     amps: { type: Number},
     hourUsage: {type: Number, required: true},
     username: {type:String, required:true},
-    userid: {type: String, required: true},
 });
 
 const Solar = mongoose.model('Solar', solarSchema);

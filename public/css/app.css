@@ -4,6 +4,9 @@
     border: 2px solid black;
 
 }
+body{
+    background-color: white;
+}
 .headTitle{
     text-shadow: 2px 2px black;
 }
