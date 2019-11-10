@@ -41,8 +41,10 @@ input#submit{
 
 }
 .underHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: lightgray;
-    text-align: center;
     height: 10vh;
     margin-top: -4.8%;
     margin-bottom: 5%;
