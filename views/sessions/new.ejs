@@ -6,17 +6,25 @@
     <body>
         <% include ../partials/header.ejs %>
         <% include ../partials/tabs.ejs %>
-
-<h1>Log in</h1>
-<%if(wrongInput){%>
-        <span class="error">Username and Password do not match</span>
-      <%}%>
-        <form action="/sessions" method="POST">
-            Username:<input type="text" name="username" /><br/>
-            Password:<input type="password" name="password" /><br/>
-            <!-- put in if statement that says username and password do not match -->
-            <input type="submit" value="Log In">
-        </form>
+        
+        <div style="background-image: url('img/login.png');">
+        <style>
+        body{
+            background-image: url("img/login.png");
+            background-repeat: no-repeat;
+        }
+        </style>
+        <img src="img/login.png" alt="">
+        <h1>Log in</h1>
+        <%if(wrongInput){%>
+                <span class="error">Username and Password do not match</span>
+              <%}%>
+                <form action="/sessions" method="POST">
+                    Username:<input type="text" name="username" /><br/>
+                    Password:<input type="password" name="password" /><br/>
+                    <!-- put in if statement that says username and password do not match -->
+                    <input type="submit" value="Log In">
+                </form>
 
         <footer>
             <% include ../partials/footer.ejs %>

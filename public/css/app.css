@@ -70,7 +70,25 @@ input#submit{
     border: 4px solid #62c4ff;
     margin-bottom: 3%;
 }
+.sessionImage{
+    height: 100%;
+    width: 100%;
+    border: 4px solid #62c4ff;
+    margin-bottom: 3%;
+}
 
+.allCommunityCards{
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+}
+.cards {
+   display: flex;
+   justify-content: space-between;
+}
+.centered{
+    display: flex;
+}
 #tabs{
     /* background-color: #FFE01C; */
     width: 100%;
@@ -161,9 +179,16 @@ footer{
 .cardImage{
     position: relative;
     width: 100%;
-    top: 30px;
-}
 
+}
+.cardCommunityBody{
+    position: relative;
+    bottom: -15px;
+    /* color: white; */
+}
+.cardCommunityText{
+    color: white;
+}
 #text{
     position: absolute;
     top: 0;
