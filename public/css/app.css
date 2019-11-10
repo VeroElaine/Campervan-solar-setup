@@ -40,6 +40,19 @@ input#submit{
     /* margin-top: 1.2%; */
 
 }
+.underHeader{
+    background-color: lightgray;
+    text-align: center;
+    height: 10vh;
+    margin-top: -4.8%;
+    margin-bottom: 5%;
+
+    /* padding-top: 2%; */
+    color: black;
+}
+#underHeader{
+    font-size: 25px;
+}
 
 .item{
     width: 100%;
@@ -205,7 +218,7 @@ footer{
     margin-left: 13%;
 }
 .carousel-caption{
-    font-size: 40px;
+    font-size: 30px;
 }
 #homeSignup a{
     text-decoration: none;
@@ -220,12 +233,13 @@ footer{
 .homeImageContainer{
     position: relative;
     text-align: center;
+    width: 100%;
     /* color: white; */
 }
 #top-left{
     position: absolute;
     top: 10%;
-    left: 4%;
+    left: -35%;
     color: white;
     font-size: 40px;
     text-shadow: 1px 1px 2px black;
@@ -244,7 +258,7 @@ footer{
 #bottom-left{
     position: absolute;
     top: 55%;
-    left: 4%;
+    left: -40%;
     font-size: 25px;
     color: #62c4ff;
 }
