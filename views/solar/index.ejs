@@ -91,8 +91,17 @@
                     Reccomended Battery bank for 12v system = <%=Math.ceil((wattHours + calcWattHours)/12)*2%> Amp hours. Buy <%=Math.ceil((Math.ceil((wattHours + calcWattHours)/12)*2)/100)%>-100 AmpHours Batteries <br><br>
                 </p>
                 <!-- A link that will show the calcuations for a 24V system -->
+                <div class="lithiumSystem">
+                    <a href="#" data-toggle="popover" data-trigger="focus" title="Going with Lithium?" data-content="Total Amp Hours for 12V System: <%=Math.ceil((wattHours + calcWattHours)/12)%> Amp hours
+                    Reccomended Battery bank for 12V Lithium system = Buy <%=Math.ceil((Math.ceil((wattHours + calcWattHours)/12))/100)%>-100 AmpHours Batteries">Going with Lithium batteries?</a>
+                  </div>
+                  <script>
+                  $(document).ready(function(){
+                      $('[data-toggle="popover"]').popover();
+                  });
+                  </script>
                 <div class="diffSystem">
-                    <a href="#" data-toggle="popover" data-trigger="focus" title="24V System" data-content="Total Amp Hours for 24V System: <%=Math.ceil((wattHours + calcWattHours)/24)%> Amp hours 
+                    <a href="#" data-toggle="popover" data-trigger="focus" title="24V System" data-content="Total Amp Hours for 24V System: <%=Math.ceil((wattHours + calcWattHours)/24)%> Amp hours
                     Reccomended Battery bank for 24v system = <%=Math.ceil((wattHours + calcWattHours)/24)*2%> Amp hours. Buy <%=Math.ceil((Math.ceil((wattHours + calcWattHours)/24)*2)/100)%>-100 AmpHours Batteries">24V System Conversion</a>
                   </div>
                   <script>
@@ -117,12 +126,14 @@
                         </div>
                         <div class="modal-body">
                           <p>
-                              * if watts are known watts = watts <br>
-                              * if watts are unknown watts = voltage times amps <br>
-                              * amp hours are watts times hours of usage divided by voltage of batteries. <br>
-                                * i.e (100watts * 2 hours)/12V <br>
-                              * Battery bank is double the amp hours.
-                              * Suggested batteries are based on 100amp hour batteries. So (double amp hours / 100) = amount of batteries
+
+                              * <span class=bold>Watts</span> = voltage times amps <br>
+                              * <span class=bold>amp hours</span>= watts times hours of usage divided by voltage of batteries. <br>
+                                * <span class=bold> i.e</span> (100watts * 2 hours)/12V <br>
+                              * <span class=bold>Battery Bank</span> for <span class=bold>AGM</span> batteries are double the amp hours. For <span class=bold>Lithium</span> it is the non-doubled amp hours<br>
+                              <span class=bold>Suggested Batteries</span> are based on 100amp hour batteries. <br>
+                              *For <span class=bold>AGM</span> ((amp hours * 2)/ 100) = amount of batteries. <br>
+                              *For <span class=bold>Lithium</span> is (amp hours/100) = amount of batteries.
                           </p>
                         </div>
                         <div class="modal-footer">
@@ -148,9 +159,11 @@
                             </div>
                             <div class="modal-body">
                               <p>
-                                  A battery bank is simply a set of batteries connected together in a certain way to provide the needed power. The needed power is based on the amp hours you require for your daily appliance usage. <br>
+                                  A battery bank is simply a set of batteries connected together in a certain way to provide the needed power. The needed power is based on the amp hours you require for your daily appliance usage. <br><br>
 
-                                  To find the right amount of batteries-if going with AGM- it is best to double up the capacity of the battery bank to avoid going below 50% of battery bank. You want to avoid going below 50% because this will reduce the lifespan of batteries.
+                                  <span class=bold>AGM</span>: To find the right amount of batteries it is best to double up the capacity of the battery bank to avoid going below 50% of battery bank. You want to avoid going below 50% because this will reduce the lifespan of batteries. <br><br>
+
+                                  <span class=bold>Lithium</span>: There is no need to double the capacity for lithium batteries becuase they can be fully discharged without affecting the lifespan of the batteries.
                               </p>
                             </div>
                             <div class="modal-footer">

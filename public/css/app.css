@@ -40,7 +40,16 @@ input#submit{
     width: 60px;
     margin-left: -4%;
     margin-top: -1%;
+    /* border: 2px solid black; */
+    /* display: inline-block; */
     /* margin-top: 1.2%; */
+}
+.headerLogo{
+    height: 54.5px;
+    width: 60px;
+    margin-left: -4%;
+    margin-top: -1%;
+    border-right: 2px solid black;
 
 }
 .underHeader{
@@ -310,4 +319,12 @@ footer{
 .diffSystem{
     border: 3px;
     margin-bottom: 5%;
+}
+
+.lithiumSystem{
+    margin-bottom: 3%;
+}
+
+.bold{
+    font-weight: bold;
 }
