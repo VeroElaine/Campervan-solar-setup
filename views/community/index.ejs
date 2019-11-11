@@ -8,10 +8,14 @@
             <div id="main">
                 <% include ../partials/header.ejs %>
                 <% include ../partials/tab4.ejs %>
-                <h1>Community Index Page</h1>
+                <div class="community">
+
+                <h1>Community Posts</h1>
                 <nav>
                     <button class="btn btn-primary"><a id="communityShare"href="/community/new">+ SHARE YOUR BUILD! </a></button>
                 </nav>
+            </div>
+
                 <div class="allCommunityCards">
 
                     <% for(let i = 0; i < community.length; i++){ %>
@@ -27,11 +31,6 @@
                                             <p class="cardCommunityText">
                                                 Design Comments: <%=community[i].description%>.</p>
 
-                                                <form action="/community/<%=community[i].id%>?_method=DELETE" method="POST">
-                                                    <input type="submit" value="DELETE"/>
-                                                </form>
-                                                <a href="/community/<%=community[i].id%>/edit">Edit</a>
-
                                         <!-- </div> -->
                                         </div>
 
@@ -43,7 +42,7 @@
                 </div>
             </div>
         </div>
-        
+
         <footer id="footer">
             <% include ../partials/footer.ejs %>
         </footer>

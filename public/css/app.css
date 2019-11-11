@@ -230,9 +230,10 @@ tr{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
   transition: 0.3s;
   /* padding-left: 40px; */
-  width: 35rem;
-  height: 35rem;
+  width: 38rem;
+  height: 38rem;
   overflow: scroll;
+  /* background: #FFE01C; */
   /* padding-top:  */
 }
 
@@ -285,11 +286,14 @@ tr{
     /* margin-bottom: 5%; */
     /* padding: 10%; */
 }
-
+.cardCommunityImage{
+    height: 70%;
+    width: 100%;
+}
 .cardCommunityBody{
     position: relative;
     /* padding-bottom: 0; */
-    bottom: -10px;
+    bottom: -8%;
     /* color: white; */
 }
 .cardCommunityText{
@@ -303,6 +307,9 @@ tr{
 /* community icon */
 #communityP{
     color: white;
+}
+.community{
+    text-align: center;
 }
 #text{
     position: absolute;
