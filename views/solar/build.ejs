@@ -76,7 +76,7 @@
                                 <td>Inverter</td>
                                 <td>
                                     <button><a href="/solar/inverter">Choose Inverter</a></button>
-                                    <%=foundUser.inverter.name%>
+                                    <%=foundUser.inverter.part%>
                                 </td>
                                 <td>$<%=foundUser.inverter.price%></td>
                                 <td>
@@ -89,7 +89,7 @@
                                     </form>
                                 </td>
                                 <td>
-                                    <a target="_blank" href="<%=foundUser.inverter.price%>" id="buy" class="btn btn-default btn-md" role="button"><span id="buyIcon" class="glyphicon glyphicon-tags"></span> Buy</a>
+                                    <a target="_blank" href="<%=foundUser.inverter.link%>" id="buy" class="btn btn-default btn-md" role="button"><span id="buyIcon" class="glyphicon glyphicon-tags"></span> Buy</a>
                                 </td>
                             </tr>
                             <tr>

@@ -27,11 +27,9 @@ router.put('/solar/panels', (req, res) => {
             $set: {panels:req.body}
         },
         (error, foundUser) => {
-            console.log(error);
-            console.log(foundUser);
-                res.redirect('/solar/build');
-            });
-        })
+            res.redirect('/solar/build');
+        });
+    })
 
 
 router.put('/solar/inverter', (req, res) => {
@@ -42,8 +40,6 @@ router.put('/solar/inverter', (req, res) => {
             $set: {inverter:req.body}
         },
         (error, foundUser) => {
-            console.log(error);
-            console.log(foundUser);
                 res.redirect('/solar/build');
             });
         })
@@ -56,8 +52,7 @@ router.put('/solar/chargecontrol', (req, res) => {
             $set: {chargecontrol:req.body}
         },
         (error, foundUser) => {
-            console.log(error);
-            console.log(foundUser);
+
                 res.redirect('/solar/build');
             });
         })
