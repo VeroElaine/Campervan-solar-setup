@@ -25,40 +25,45 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Veronica Battery</td>
+                                <td>firstBattery</td>
                                 <td>random specs</td>
                                 <!-- <button><a href="https://www.amazon.com/Renogy-Monocrystalline-Solar-Compact-Design/dp/B07GF5JY35/ref=sr_1_9?keywords=solar+panels&qid=1573102643&sr=8-9">Choose Pannel</a></button> -->
                                 <td>more specs</td>
-                                <td>$949</td>
+                                <td>$250</td>
                                 <td>
                                     <a target="_blank" href="https://www.amazon.com/LiFePO4-Volt-Deep-Cycle-Battery/dp/B06XX197GJ/ref=sr_1_4?crid=3LDT97M1JZIGJ&dchild=1&keywords=lithium+solar+battery&qid=1573116334&sprefix=lithium+so%2Caps%2C191&sr=8-4" id="info" class="btn btn-default btn-md" role="button"><span class="glyphicon glyphicon-info-sign"></span> info </a>
                                 </td>
                                 <td>
 
                                     <form action="/build/solar/battery?_method=PUT" method="POST">
-                                        <input type="hidden" name="battery" value="firstBattery">
+                                        <input type="hidden" name="part" value="firstBattery">
+                                        <input type="hidden" name="price" value="250">
+                                        <input type="hidden" name="link" value="https://www.amazon.com/LiFePO4-Volt-Deep-Cycle-Battery/dp/B06XX197GJ/ref=sr_1_4?crid=3LDT97M1JZIGJ&dchild=1&keywords=lithium+solar+battery&qid=1573116334&sprefix=lithium+so%2Caps%2C191&sr=8-4">
                                         <input type="submit" value="Add"/>
                                     </form>
                                 </td>
 
                             </tr>
                             <tr>
-                                <td>Jonathan Battery</td>
+                                <td>secondBattery</td>
                                 <td>random specs</td>
                                 <td>more specs</td>
-                                <td>$169</td>
+                                <td>$300</td>
                                 <td>
                                     <a target="_blank" href="https://www.amazon.com/Universal-Power-Group-100Ah-Battery/dp/B00S1RT58C/ref=sr_1_5?crid=1J0HTUJJGRSDO&keywords=agm+solar+battery&qid=1573116796&sprefix=agm+solar%2Caps%2C190&sr=8-5" id="info" class="btn btn-default btn-md" role="button"><span class="glyphicon glyphicon-info-sign"></span> info </a>
                                 </td>
                                 <td>
-                                    <form action="/solar/build" method="POST">
+                                    <form action="/build/solar/battery?_method=PUT" method="POST">
+                                        <input type="hidden" name="part" value="secondBattery">
+                                        <input type="hidden" name="price" value="300">
+                                        <input type="hidden" name="link" value="https://www.amazon.com/LiFePO4-Volt-Deep-Cycle-Battery/dp/B06XX197GJ/ref=sr_1_4?crid=3LDT97M1JZIGJ&dchild=1&keywords=lithium+solar+battery&qid=1573116334&sprefix=lithium+so%2Caps%2C191&sr=8-4">
                                         <input type="submit" value="Add"/>
                                     </form>
                                 </td>
 
                             </tr>
                             <tr>
-                                <td>next </td>
+                                <td>thirdBattery </td>
                                 <td>more specs</td>
                                 <td>random specs</td>
                                 <td>$120</td>
@@ -66,14 +71,17 @@
                                     <a target="_blank" href="https://www.amazon.com/LiFePO4-Volt-Deep-Cycle-Battery/dp/B06XX197GJ/ref=sr_1_4?crid=3LDT97M1JZIGJ&dchild=1&keywords=lithium+solar+battery&qid=1573116334&sprefix=lithium+so%2Caps%2C191&sr=8-4" id="info" class="btn btn-default btn-md" role="button"><span class="glyphicon glyphicon-info-sign"></span> info </a>
                                 </td>
                                 <td>
-                                    <form action="/solar/build" method="POST">
+                                    <form action="/build/solar/battery?_method=PUT" method="POST">
+                                        <input type="hidden" name="part" value="thirdBattery">
+                                        <input type="hidden" name="price" value="120">
+                                        <input type="hidden" name="link" value="https://www.amazon.com/LiFePO4-Volt-Deep-Cycle-Battery/dp/B06XX197GJ/ref=sr_1_4?crid=3LDT97M1JZIGJ&dchild=1&keywords=lithium+solar+battery&qid=1573116334&sprefix=lithium+so%2Caps%2C191&sr=8-4">
                                         <input type="submit" value="Add"/>
                                     </form>
                                 </td>
 
                             </tr>
                             <tr>
-                                <td>next </td>
+                                <td>fourthBattery </td>
                                 <td>more specs</td>
                                 <td>random specs</td>
                                 <td>$200</td>
@@ -81,7 +89,10 @@
                                     <a target="_blank" href="https://www.amazon.com/LiFePO4-Volt-Deep-Cycle-Battery/dp/B06XX197GJ/ref=sr_1_4?crid=3LDT97M1JZIGJ&dchild=1&keywords=lithium+solar+battery&qid=1573116334&sprefix=lithium+so%2Caps%2C191&sr=8-4" id="info" class="btn btn-default btn-md" role="button"><span class="glyphicon glyphicon-info-sign"></span> info </a>
                                 </td>
                                 <td>
-                                    <form action="/solar/battery/build?_method=PUT" method="POST">
+                                    <form action="/build/solar/battery?_method=PUT" method="POST">
+                                        <input type="hidden" name="part" value="fourthBattery">
+                                        <input type="hidden" name="price" value="200">
+                                        <input type="hidden" name="link" value="https://www.amazon.com/LiFePO4-Volt-Deep-Cycle-Battery/dp/B06XX197GJ/ref=sr_1_4?crid=3LDT97M1JZIGJ&dchild=1&keywords=lithium+solar+battery&qid=1573116334&sprefix=lithium+so%2Caps%2C191&sr=8-4">
                                         <input type="submit" value="Add"/>
                                     </form>
                                 </td>

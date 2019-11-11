@@ -19,7 +19,14 @@
                 <form action="/users" method="POST">
                     Username: <input id="userText" class="username"type="text" name="username" /><br/>
                     Password: <input id="userText" type="password" name="password" /><br/>
-                    <div class="state"> State: <input id="userText" type="text" name="state" /><br/></div>
+                    <div class="state"> State: <input id="userText" type="text" name="state" data-toggle="tooltip" title="input your state to get average Sun hours in your state!"/><br/></div>
+                    <!-- for tooltip above -->
+                    <script>
+                    $(document).ready(function(){
+                      $('[data-toggle="tooltip"]').tooltip();
+                    });
+                    </script>
+
 
                     <input id="accountRegister"type="submit" value="Register"/>
                 </form>

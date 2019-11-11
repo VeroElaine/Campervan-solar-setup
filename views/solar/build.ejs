@@ -31,47 +31,54 @@
                                 <td>
                                     <div class="build-edit">
                                         <button><a href="/solar/battery">Choose Battery</a></button>
-                                        <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery"><span class="glyphicon glyphicon-edit"></span> EDIT</button>
+                                        <%=foundUser.battery.part%>
 
                                         <!-- <form action="/solar/battery" method="POST">
                                         <button type="submit" id="edit"class="btn btn-default btn-md">EDIT</button> -->
                                     </div>
                                  </td>
-                                <td>$</td>
+                                <td>$<%=foundUser.battery.price%></td>
                                 <td>
-
+                                    <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery"><span class="glyphicon glyphicon-edit"></span> EDIT</button>
                                 </td>
                                 <td>
-                                    <form action="/solar/?_method=DELETE" method="POST">
+                                    <form action="/solar/build/battery?_method=DELETE" method="POST">
                                         <button type="submit" id="delete" class="btn btn-default btn-md">
                                        <span class="glyphicon glyphicon-trash"></span></button>
                                     </form>
                                 </td>
                                 <td>
-                                    <a target="_blank" href="https://www.amazon.com/Renogy-Monocrystalline-Solar-Compact-Design/dp/B07GF5JY35/ref=sr_1_9?keywords=solar+panels&qid=1573102643&sr=8-9" id="buy" class="btn btn-default btn-md" role="button"><span id="buyIcon" class="glyphicon glyphicon-tags"></span> Buy</a>
+                                    <a target="_blank" href="<%=foundUser.battery.link%>" id="buy" class="btn btn-default btn-md" role="button"><span id="buyIcon" class="glyphicon glyphicon-tags"></span> Buy</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Solar Panels</td>
-                                <td><button><a href="/solar/panels">Choose Pannels</a></button></td>
-                                <td>$</td>
                                 <td>
-                                    <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery"><span class="glyphicon glyphicon-edit"></span> EDIT</button>
+                                    <button><a href="/solar/panels">Choose Pannels</a></button>
+                                    <%=foundUser.panels.part%>
+                                </td>
+
+                                <td>$<%=foundUser.panels.price%></td>
+                                <td>
+                                    <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/panels"><span class="glyphicon glyphicon-edit"></span> EDIT</button>
                                 </td>
                                 <td>
-                                    <form action="/solar/?_method=DELETE" method="POST">
+                                    <form action="/solar/build/panels?_method=DELETE" method="POST">
                                         <button type="submit" id="delete" class="btn btn-default btn-md">
                                        <span class="glyphicon glyphicon-trash"></span></button>
                                     </form>
                                 </td>
                                 <td>
-                                    <a target="_blank" href="https://www.amazon.com/Renogy-Monocrystalline-Solar-Compact-Design/dp/B07GF5JY35/ref=sr_1_9?keywords=solar+panels&qid=1573102643&sr=8-9" id="buy" class="btn btn-default btn-md" role="button"><span id="buyIcon" class="glyphicon glyphicon-tags"></span> Buy</a>
+                                    <a target="_blank" href="<%=foundUser.panels.link%>" id="buy" class="btn btn-default btn-md" role="button"><span id="buyIcon" class="glyphicon glyphicon-tags"></span> Buy</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Inverter</td>
-                                <td><button><a href="/solar/inverter">Choose Inverter</a></button></td>
-                                <td>$</td>
+                                <td>
+                                    <button><a href="/solar/inverter">Choose Inverter</a></button>
+                                    <%=foundUser.inverter.name%>
+                                </td>
+                                <td>$<%=foundUser.inverter.price%></td>
                                 <td>
                                     <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery"><span class="glyphicon glyphicon-edit"></span> EDIT</button>
                                 </td>
@@ -82,13 +89,18 @@
                                     </form>
                                 </td>
                                 <td>
-                                    <a target="_blank" href="https://www.amazon.com/Renogy-Monocrystalline-Solar-Compact-Design/dp/B07GF5JY35/ref=sr_1_9?keywords=solar+panels&qid=1573102643&sr=8-9" id="buy" class="btn btn-default btn-md" role="button"><span id="buyIcon" class="glyphicon glyphicon-tags"></span> Buy</a>
+                                    <a target="_blank" href="<%=foundUser.inverter.price%>" id="buy" class="btn btn-default btn-md" role="button"><span id="buyIcon" class="glyphicon glyphicon-tags"></span> Buy</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Charge Control</td>
-                                <td><button><a href="/solar/chargecontrol">Choose Charge Control</a></button> </td>
-                                <td>$</td>
+                                <td>
+                                    <button><a href="/solar/chargecontrol">Choose Charge Control</a></button>
+                                    <%=foundUser.chargecontrol.part%>
+
+                                 </td>
+
+                                <td>$<%=foundUser.chargecontrol.price%></td>
                                 <td>
                                     <button type="submit" id="edit" class="btn btn-default btn-md"><a href="/solar/battery"><span class="glyphicon glyphicon-edit"></span> EDIT</button>
                                 </td>
@@ -99,7 +111,7 @@
                                     </form>
                                 </td>
                                 <td>
-                                    <a target="_blank" href="https://www.amazon.com/Renogy-Monocrystalline-Solar-Compact-Design/dp/B07GF5JY35/ref=sr_1_9?keywords=solar+panels&qid=1573102643&sr=8-9" id="buy" class="btn btn-default btn-md" role="button"><span id="buyIcon" class="glyphicon glyphicon-tags"></span> Buy</a>
+                                    <a target="_blank" href="<%=foundUser.chargecontrol.link%>" id="buy" class="btn btn-default btn-md" role="button"><span id="buyIcon" class="glyphicon glyphicon-tags"></span> Buy</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -108,7 +120,7 @@
                 </div>
 
                 <nav>
-                    <button type="button" class="btn btn-default btn-sm"><a href="/"><span class="glyphicon glyphicon-home"></span>Back to Home Page</a></button>
+                    <button type="button" class="btn btn-default btn-sm"><a href="/solar"><span class="glyphicon glyphicon-flash"></span>Back to my data table</a></button>
                 </nav>
             </div>
         </div>

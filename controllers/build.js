@@ -7,19 +7,60 @@ const router = express.Router();
 // })
 
 router.put('/solar/battery', (req, res) => {
-    User.findOne({
-        username:req.session.username},
+    console.log(req.body);
+    User.findOneAndUpdate(
+        {username:req.session.username},
+        {
+            $set: {battery:req.body}
+        },
+
+        (error, foundUser) => {
+            res.redirect('/solar/build');
+        });
+    })
+
+router.put('/solar/panels', (req, res) => {
+    console.log(req.body);
+    User.findOneAndUpdate(
+        {username:req.session.username},
+        {
+            $set: {panels:req.body}
+        },
         (error, foundUser) => {
             console.log(error);
             console.log(foundUser);
-            foundUser.battery.push(req.body);
-            foundUser.save(
-                (error, data) => {
                 res.redirect('/solar/build');
             });
         })
-    })
 
+
+router.put('/solar/inverter', (req, res) => {
+    console.log(req.body);
+    User.findOneAndUpdate(
+        {username:req.session.username},
+        {
+            $set: {inverter:req.body}
+        },
+        (error, foundUser) => {
+            console.log(error);
+            console.log(foundUser);
+                res.redirect('/solar/build');
+            });
+        })
+
+router.put('/solar/chargecontrol', (req, res) => {
+    console.log(req.body);
+    User.findOneAndUpdate(
+        {username:req.session.username},
+        {
+            $set: {chargecontrol:req.body}
+        },
+        (error, foundUser) => {
+            console.log(error);
+            console.log(foundUser);
+                res.redirect('/solar/build');
+            });
+        })
 
 
 module.exports = router;
