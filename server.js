@@ -57,6 +57,9 @@ app.use('/sessions', sessionsController);
 const communityController = require("./controllers/communitybuilds.js");
 app.use("/community", communityController);
 
+const buildController = require('./controllers/build.js');
+app.use('/build', buildController);
+
 
 //------------------------
 // Routes

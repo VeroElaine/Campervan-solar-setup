@@ -1,5 +1,6 @@
 const express = require('express');
 const Solar = require('../models/solar.js');
+const User = require("../models/users.js");
 const router = express.Router();
 
 router.get('/new', (req, res) => {
@@ -8,12 +9,16 @@ router.get('/new', (req, res) => {
 
 router.get('/build', (req, res) => {
     if(req.session.username){
-        Solar.find({userid:req.session.userid}, (error, allSolar) => {
-            res.render('solar/build.ejs')
-        })
-        } else {
-            res.redirect('/');
-        }
+        User.findOne({
+            username:req.session.username},
+                Solar.find({userid:req.session.userid}, (error, allSolar) => {
+                    res.render('solar/build.ejs',{
+                        username:req.session.username
+                    })
+                }))
+        }else {
+               res.redirect('/');
+           }
     });
 
 
@@ -66,17 +71,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.put('/solar/battery', (req, res) => {
-    User.findOne(
-        req.session.username,
-        (error, foundUser) => {
-            foundUser.battery.push(req.body);
-            foundUser.save(
-                (error, data) => {
-                res.redirect('/solar/build');
-            });
-        })
-    })
+
 
 router.put('/:id', (req, res) => {
     Solar.findByIdAndUpdate(
