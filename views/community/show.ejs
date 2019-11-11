@@ -4,14 +4,20 @@
         <% include ../partials/head.ejs %>
     </head>
     <body>
-        <% include ../partials/header.ejs %>
-        <% include ../partials/tab4.ejs %>
-        <h1>Community Show Page</h1>
-        The <%=community.name%> is <%=community.image%>.
-        <%=community.description%>
+        <div id="container">
+            <div id="main">
+                <% include ../partials/header.ejs %>
+                <% include ../partials/tab4.ejs %>
 
-        <nav>
-            <a href="/community">Back to community Index</a>
-        </nav>
-    </body>
+                <h1>Community Show Page</h1>
+                Description: <%=community.description%>
+                <nav>
+                    <a href="/community">Back to community posts</a>
+                </nav>
+            </div>
+        </div>
+    <footer id="footer">
+        <% include ../partials/footer.ejs %>
+    </footer>
+</body>
 </html>

@@ -4,18 +4,24 @@
         <% include ../partials/head.ejs %>
     </head>
     <body>
-        <% include ../partials/header.ejs %>
-        <% include ../partials/tabs.ejs %>
-        
-        <h1>Solar Show Page</h1>
-        <%=solar.applianceName%>
-        <%=solar.watts%>watts.
+        <div id="container">
+            <div id="main">
+                <% include ../partials/header.ejs %>
+                <% include ../partials/tabs.ejs %>
 
-        <nav>
-            <a href="/solar">Back to Solar Index</a>
-        </nav>
-    </body>
-    <footer>
+                <h1>Solar Show Page</h1>
+                <%=solar.applianceName%>
+                <%=solar.watts%>watts.
+
+                <nav>
+                    <a href="/solar">Back to Solar Index</a>
+                </nav>
+            </div>
+        </div>
+
+    <footer id="footer">
         <% include ../partials/footer.ejs %>
     </footer>
+</body>
+
 </html>

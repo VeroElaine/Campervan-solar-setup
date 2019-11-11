@@ -4,20 +4,30 @@
         <% include ../partials/head.ejs %>
     </head>
     <body>
-        <% include ../partials/header.ejs %>
-        <% include ../partials/tabs.ejs %>
-        <h1>Sign Up!</h1>
-        <% if(usernameTaken){ %>
-                <span class="error">Username already taken. Please try a different username</span>
-            <% } %>
-        <form action="/users" method="POST">
-            Username: <input type="text" name="username" /><br/>
-            Password: <input type="password" name="password" /><br/>
-            State: <input type="text" name="state" /><br/>
+        <div id="container">
+            <div id="main">
+                <% include ../partials/header.ejs %>
+                <% include ../partials/tabs.ejs %>
+                <% include ../partials/dataPages.ejs %>
 
-            <input type="submit" value="Register"/>
-        </form>
-        <footer>
+
+                <h1>Sign Up!</h1>
+                <% if(usernameTaken){ %>
+                        <span class="error">Username already taken. Please try a different username</span>
+                    <% } %>
+                <form action="/users" method="POST">
+                    Username: <input type="text" name="username" /><br/>
+                    Password: <input type="password" name="password" /><br/>
+                    State: <input type="text" name="state" /><br/>
+
+                    <input type="submit" value="Register"/>
+                </form>
+                <nav>
+                    <a href="/sessions/new">Already have an account?</a>
+                </nav>
+            </div>
+        </div>
+        <footer id="footer">
             <% include ../partials/footer.ejs %>
         </footer>
     </body>

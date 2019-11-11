@@ -16,7 +16,6 @@ router.get("/new/wronginput", (req, res) => {
     });
 });
 router.post('/', (req, res) => {
-    // console.log(req.body);
     User.findOne({username:req.body.username}, (error,foundUser) => {
         if(foundUser === null){
             // wrongInput = true;
@@ -25,7 +24,6 @@ router.post('/', (req, res) => {
             const doesPasswordMatch = bcrypt.compareSync(req.body.password, foundUser.password);
             if(doesPasswordMatch){
                 req.session.username = foundUser.username;
-                // console.log(req.session);
                 req.session.userid = foundUser._id;
                 res.redirect('/solar');
             } else {

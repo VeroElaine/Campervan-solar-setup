@@ -4,15 +4,21 @@
         <% include ../partials/head.ejs %>
     </head>
     <body>
-        <% include ../partials/header.ejs %>
-        <% include ../partials/tab4.ejs %>
-        <h1>New community post page</h1>
-            <form action="/community" method="POST">
-            Name: <input type="text" name="name" /><br/>
-            Image URL: <input type="text" name="image" /><br/>
-            Description: <input type="textarea" name="description" /><br/>
-            <input type="submit" value="Create Post"/>
-            </form>
-
+        <div id="container">
+            <div id="main">
+                <% include ../partials/header.ejs %>
+                <% include ../partials/tab4.ejs %>
+                <h1>New community post page</h1>
+                    <form action="/community" method="POST">
+                    Name: <input type="text" name="name" /><br/>
+                    Image URL: <input type="text" name="image" /><br/>
+                    Description: <input type="textarea" name="description" /><br/>
+                    <input type="submit" value="Create Post"/>
+                    </form>
+                </div>
+            </div>
+        <footer id="footer">
+            <% include ../partials/footer.ejs %>
+        </footer>
     </body>
 </html>

@@ -4,19 +4,25 @@
         <% include ../partials/head.ejs %>
     </head>
     <body>
-        <% include ../partials/header.ejs %>
-        <% include ../partials/tabs.ejs %>
-        
-        <h1>Edit Solar Page</h1>
-        <form action="/solar/<%=solar.id%>?_method=PUT" method="POST">
-            applianceName: <input type="text" name="applianceName" value="<%=solar.applianceName%>"/><br/>
-            Watts: <input type="text" name="watts" value="<%=solar.watts%>" /><br/>
-            Voltage: <input type="text" name="voltage" value="<%=solar.voltage%>" /><br/>
-            amps: <input type="text" name="amps" value="<%=solar.amps%>" /><br/>
-            hourUsage: <input type="text" name="hourUsage" value="<%=solar.hourUsage%>" /><br/>
-            <input type="submit" value="Submit Changes">
-        <form>
+        <div id="container">
+            <div id="main">
+                <% include ../partials/header.ejs %>
+                <% include ../partials/tabs.ejs %>
 
+                <h1>Edit Solar Page</h1>
+                <form action="/solar/<%=solar.id%>?_method=PUT" method="POST">
+                    applianceName: <input type="text" name="applianceName" value="<%=solar.applianceName%>"/><br/>
+                    Watts: <input type="text" name="watts" value="<%=solar.watts%>" /><br/>
+                    Voltage: <input type="text" name="voltage" value="<%=solar.voltage%>" /><br/>
+                    amps: <input type="text" name="amps" value="<%=solar.amps%>" /><br/>
+                    hourUsage: <input type="text" name="hourUsage" value="<%=solar.hourUsage%>" /><br/>
+                    <input type="submit" value="Submit Changes">
+                <form>
+                </div>
+            </div>
+    <footer id="footer">
+        <% include ../partials/footer.ejs %>
+    </footer>
 
     </body>
 </html>

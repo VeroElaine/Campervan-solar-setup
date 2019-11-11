@@ -6,6 +6,7 @@
 }
 body{
     background-color: white;
+    height: 100%;
 }
 .headTitle{
     text-shadow: 2px 2px black;
@@ -67,7 +68,6 @@ input#submit{
 #underHeader{
     font-size: 25px;
 }
-
 .item{
     width: 100%;
 }
@@ -156,11 +156,6 @@ tr{
 
 }
 
-footer{
-    background-color: gray;
-    height: 20%;
-    color: white;
-}
 .icons a{
     color:white;
     height: 10%;
@@ -173,6 +168,8 @@ footer{
   /* padding-left: 40px; */
   width: 35rem;
   height: 35rem;
+  overflow: scroll;
+  /* padding-top:  */
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -184,7 +181,8 @@ footer{
 /* Add some padding inside the card container */
 .allCards {
   /* padding: 2px 26px; */
-  justify-content: center;
+  height: 100%;
+  justify-content: space-around;
   padding-left: 2%;
   display: flex;
   margin-bottom: 10%;
@@ -203,6 +201,14 @@ footer{
     width: 70%;
     margin-top: 10%;
     margin-left: 13%;
+    height: 100%;
+
+}
+.cardInfoImage{
+    position: relative;
+    width: 70%;
+    margin-top: 10%;
+    margin-left: 13%;
 
 }
 
@@ -215,11 +221,7 @@ footer{
     /* margin-bottom: 5%; */
     /* padding: 10%; */
 }
-/* community card */
-.card{
-    padding-top: 0;
 
-}
 .cardCommunityBody{
     position: relative;
     /* padding-bottom: 0; */
@@ -327,4 +329,27 @@ footer{
 
 .bold{
     font-weight: bold;
+}
+
+#newDataInput{
+    margin-top: 3%;
+    text-align: center;
+    /* margin-left: 12%; */
+}
+
+#container{
+    min-height: 100%
+}
+#main{
+    overflow: auto;
+    padding-bottom: 30%;
+}
+#footer{
+    background-color: gray;
+    position: relative;
+    height: 30%;
+    /* margin-top: -30%; */
+    clear: both;
+
+
 }

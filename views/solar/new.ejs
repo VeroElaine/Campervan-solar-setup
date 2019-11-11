@@ -4,18 +4,30 @@
         <% include ../partials/head.ejs %>
     </head>
     <body>
-        <% include ../partials/header.ejs %>
-        <% include ../partials/tabs.ejs %>
-        
-        <h1>New Solar Page</h1>
-        <form action="/solar" method="POST">
-            applianceName: <input type="text" placeholder="Fridge" name="applianceName"/><br/>
-            Watts: <input type="text" placeholder="300" name="watts"  /><br/>
-            Voltage: <input type="text" placeholder="fill out if watts are unknown" name="voltage" /><br/>
-            amps: <input type="text" placeholder="fill out if watts are unknown" name="amps" /><br/>
-            hourUsage: <input type="text" placeholder="ex. 2 or 2.3 or 4" name="hourUsage" /><br/>
-            <input type="submit" value="Create Solar"/>
-        </form>
+        <div id="container">
+            <div id="main">
+                <% include ../partials/header.ejs %>
+                <% include ../partials/tabs.ejs %>
 
+                <h1>Input Your Appliances</h1>
+                <form id="newDataInput" action="/solar" method="POST">
+                    <p class ="newSolarInput">
+                    If you <span class="bold">don't</span> know the watts <span class="bold">leave field empty</span>, input BOTH voltage <span class="bold">AND</span> amps for the table to do the calculation for you
+                    </p>
+                    Appliance: <input type="text" placeholder="Fridge" name="applianceName"/><br/>
+                    Watts: <input type="text" placeholder="i.e 300" name="watts"  /><br/>
+                    Voltage: <input type="text" placeholder="i.e 12" name="voltage" /><br/>
+                    Amps: <input type="text" placeholder="i.e 5" name="amps" /><br/>
+                    *Hour Usage: <input type="text" placeholder="i.e .5 or 2.3 or 4" name="hourUsage" /><br/>
+                    *Required <br>
+                    Tip: If you have a fridge input 8 hours even when on for full day. It is generally averaged this way since it stops running once it reaches the correct temp. <br><br>
+                    <input type="submit" value="Submit Appliance Data"/>
+                </form>
+            </div>
+        </div>
+        <footer id="footer">
+            <% include ../partials/footer.ejs %>
+
+        </footer>
     </body>
 </html>

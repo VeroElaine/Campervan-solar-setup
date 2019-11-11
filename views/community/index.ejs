@@ -4,42 +4,49 @@
         <% include ../partials/head.ejs %>
     </head>
     <body>
-        <% include ../partials/header.ejs %>
-        <% include ../partials/tab4.ejs %>
-        <h1>Community Index Page</h1>
-        <nav>
-            <button class="btn btn-primary"><a id="communityShare"href="/community/new">+ SHARE YOUR BUILD! </a></button>
-        </nav>
-        <div class="allCommunityCards">
+        <div id="container">
+            <div id="main">
+                <% include ../partials/header.ejs %>
+                <% include ../partials/tab4.ejs %>
+                <h1>Community Index Page</h1>
+                <nav>
+                    <button class="btn btn-primary"><a id="communityShare"href="/community/new">+ SHARE YOUR BUILD! </a></button>
+                </nav>
+                <div class="allCommunityCards">
 
-            <% for(let i = 0; i < community.length; i++){ %>
-                    <div class="card" >
-                        <!-- <div class="col s12 m4"> -->
-                        <div class="cardCommunityImage">
-                            <img class="card-img-top" src="<%=community[i].image%>" alt="<%=community[i].name%>'s image">
-                        </div>
-                            <div class="cardCommunityBody">
-                                <div id="text" class="caption text-center">
-                                    <h5 class="card-title"><a href="/community/<%=community[i].id%>"><span id="communityP" class="glyphicon glyphicon-user"></span>
-                                        <%=community[i].name%></h5>
-                                    <p class="cardCommunityText">
-                                        Design Comments: <%=community[i].description%>.</p>
-
-                                        <form action="/community/<%=community[i].id%>?_method=DELETE" method="POST">
-                                            <input type="submit" value="DELETE"/>
-                                        </form>
-                                        <a href="/community/<%=community[i].id%>/edit">Edit</a>
-
-                                <!-- </div> -->
+                    <% for(let i = 0; i < community.length; i++){ %>
+                            <div class="card" >
+                                <!-- <div class="col s12 m4"> -->
+                                <div class="cardCommunityImage">
+                                    <img class="card-img-top" src="<%=community[i].image%>" alt="<%=community[i].name%>'s image">
                                 </div>
+                                    <div class="cardCommunityBody">
+                                        <div id="text" class="caption text-center">
+                                            <h5 class="card-title"><a href="/community/<%=community[i].id%>"><span id="communityP" class="glyphicon glyphicon-user"></span>
+                                                <%=community[i].name%></h5>
+                                            <p class="cardCommunityText">
+                                                Design Comments: <%=community[i].description%>.</p>
 
-                            </div>
-                        </div>
-                    <!-- </div> -->
+                                                <form action="/community/<%=community[i].id%>?_method=DELETE" method="POST">
+                                                    <input type="submit" value="DELETE"/>
+                                                </form>
+                                                <a href="/community/<%=community[i].id%>/edit">Edit</a>
 
-            <% } %>
+                                        <!-- </div> -->
+                                        </div>
+
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+
+                    <% } %>
+                </div>
+            </div>
         </div>
 
+        <footer id="footer">
+            <% include ../partials/footer.ejs %>
+        </footer>
 
     </body>
 </html>
