@@ -12,11 +12,12 @@
 
                 <div class="newUser">
 
-                <% if(usernameTaken){ %>
-                        <span class="error">Username already taken. Please try a different username</span>
-                    <% } %>
+
                     <div id="box" >
                     <h1 class="logIn">Sign Up!</h1>
+                    <% if(usernameTaken){ %>
+                            <span class="error">Username already taken. Please try a different username</span>
+                        <% } %>
                 <form action="/users" method="POST">
                     Username: <input id="userText" class="username"type="text" name="username" /><br/>
                     Password: <input id="userText" type="password" name="password" /><br/>
