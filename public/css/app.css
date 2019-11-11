@@ -186,7 +186,6 @@ tr{
   padding-left: 2%;
   display: flex;
   margin-bottom: 10%;
-  margin-top: 3%;
   overflow: scroll;
 
 }
@@ -201,6 +200,7 @@ tr{
     width: 70%;
     margin-top: 10%;
     margin-left: 13%;
+    margin-bottom: 2%;
     height: 100%;
 
 }
@@ -301,7 +301,7 @@ tr{
 }
 
 .homePageText{
-    margin-top: 6%;
+    margin-top: -22%;
     margin-bottom: 4%;
     text-align: center;
     color: lightgray;

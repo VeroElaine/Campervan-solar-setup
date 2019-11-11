@@ -2,12 +2,6 @@ const express = require('express');
 const Solar = require('../models/solar.js');
 const router = express.Router();
 
-router.get("/test", (req, res) => {
-    Solar.find({}, (error, solar) => {
-        res.send(solar)
-    })
-})
-
 router.get('/new', (req, res) => {
     res.render('solar/new.ejs')
 });
@@ -92,14 +86,6 @@ router.post('/', (req, res) => {
         console.log(createdSolar);
     });
 });
-
-// router.post("/build", (req, res) => {
-//     Solar.create(build, (error, createdBuild) => {
-//         res.redirect("/solar/build")
-//     })
-// })
-
-
 
 router.get('/', (req, res) => {
     if(req.session.username){
