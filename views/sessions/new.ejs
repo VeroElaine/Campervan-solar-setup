@@ -12,13 +12,13 @@
                 <div class="newUser">
                     <div id="box" >
 
-                    <h1>Log in</h1>
+                    <h1 class="logIn">Log in</h1>
                     <%if(wrongInput){%>
-                            <span class="error">Username and Password do not match</span>
+                            <span class="error">Username and Password do not match. Please try again</span>
                           <%}%>
                             <form action="/sessions" method="POST">
-                                Username:<input type="text" name="username" /><br/>
-                                Password:<input type="password" name="password" /><br/>
+                                Username:<input id="userText" class="username" type="text" name="username" /><br/>
+                                Password:<input id="userText"type="password" name="password" /><br/>
                                 <!-- put in if statement that says username and password do not match -->
                                 <input id="accountRegister" type="submit" value="Log In">
                             </form>

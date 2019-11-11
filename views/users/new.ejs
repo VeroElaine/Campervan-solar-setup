@@ -16,11 +16,11 @@
                         <span class="error">Username already taken. Please try a different username</span>
                     <% } %>
                     <div id="box" >
-                    <h1>Sign Up!</h1>
+                    <h1 class="logIn">Sign Up!</h1>
                 <form action="/users" method="POST">
-                    Username: <input type="text" name="username" /><br/>
-                    Password: <input type="password" name="password" /><br/>
-                    State: <input type="text" name="state" /><br/>
+                    Username: <input id="userText" class="username"type="text" name="username" /><br/>
+                    Password: <input id="userText" type="password" name="password" /><br/>
+                    <div class="state"> State: <input id="userText" type="text" name="state" /><br/></div>
 
                     <input id="accountRegister"type="submit" value="Register"/>
                 </form>
