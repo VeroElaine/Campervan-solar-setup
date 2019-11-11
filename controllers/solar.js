@@ -7,8 +7,15 @@ router.get('/new', (req, res) => {
 });
 
 router.get('/build', (req, res) => {
-        res.render('solar/build.ejs');
+    if(req.session.username){
+        Solar.find({userid:req.session.userid}, (error, allSolar) => {
+            res.render('solar/build.ejs')
+        })
+        } else {
+            res.redirect('/');
+        }
     });
+
 
 router.get('/battery', (req, res) => {
     res.render('solar/battery.ejs');

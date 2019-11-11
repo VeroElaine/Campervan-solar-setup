@@ -7,16 +7,11 @@ router.get('/new', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    if(req.session.username){
     Community.create(req.body, (error, createdCommunity) => {
-        res.redirect('/community', {
-            username:req.session.username
-        });
-    })
-    }else {
-        res.redirect('/');
-    }
+        res.redirect('/community')
+    });
 });
+
 
 router.get('/', (req, res) => {
     // if(req.session.username){

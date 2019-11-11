@@ -8,15 +8,28 @@
             <div id="main">
                 <% include ../partials/header.ejs %>
                 <% include ../partials/tab4.ejs %>
-                <h1>New community post page</h1>
+                <div class="newUser">
+                    <div id="box" >
+
+                <h3 class="logIn">CONGRATS! <br>Your Journey has been successful! Share your build and help inspre others along their journey too!</h3>
+                <p>Please make sure you are signed in otherwise your post will not submit.</p>
                     <form action="/community" method="POST">
-                    Name: <input type="text" name="name" /><br/>
-                    Image URL: <input type="text" name="image" /><br/>
-                    Description: <input type="textarea" name="description" /><br/>
-                    <input type="submit" value="Create Post"/>
+                    Name: <input id="userText" class="username" type="text" name="name" /><br/>
+                    Image URL: <input id="userText"type="text" name="image" data-toggle="tooltip" title="host your image on imugr and copy link here"/><br/>    
+                    <!-- for tooltip above -->
+                    <script>
+                    $(document).ready(function(){
+                      $('[data-toggle="tooltip"]').tooltip();
+                    });
+                    </script>
+
+                    Description: <input id="userText"type="textarea" name="description" /><br/>
+                    <input id="accountRegister" type="submit" value="Create Post"/>
                     </form>
                 </div>
             </div>
+        </div>
+    </div>
         <footer id="footer">
             <% include ../partials/footer.ejs %>
         </footer>
