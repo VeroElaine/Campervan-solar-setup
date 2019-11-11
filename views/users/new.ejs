@@ -10,23 +10,28 @@
                 <% include ../partials/tabs.ejs %>
                 <% include ../partials/dataPages.ejs %>
 
+                <div class="newUser">
 
-                <h1>Sign Up!</h1>
                 <% if(usernameTaken){ %>
                         <span class="error">Username already taken. Please try a different username</span>
                     <% } %>
+                    <div id="box" >
+                    <h1>Sign Up!</h1>
                 <form action="/users" method="POST">
                     Username: <input type="text" name="username" /><br/>
                     Password: <input type="password" name="password" /><br/>
                     State: <input type="text" name="state" /><br/>
 
-                    <input type="submit" value="Register"/>
+                    <input id="accountRegister"type="submit" value="Register"/>
                 </form>
-                <nav>
-                    <a href="/sessions/new">Already have an account?</a>
+                <nav >
+                    <a class="account" href="/sessions/new">Already have an account?</a>
                 </nav>
             </div>
+            </div>
         </div>
+    </div>
+
         <footer id="footer">
             <% include ../partials/footer.ejs %>
         </footer>

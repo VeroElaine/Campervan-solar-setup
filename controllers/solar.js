@@ -59,6 +59,18 @@ router.get('/:id', (req, res) => {
     });
 });
 
+router.put('/solar/battery', (req, res) => {
+    User.findOne(
+        req.session.username,
+        (error, foundUser) => {
+            foundUser.battery.push(req.body);
+            foundUser.save(
+                (error, data) => {
+                res.redirect('/solar/build');
+            });
+        })
+    })
+
 router.put('/:id', (req, res) => {
     Solar.findByIdAndUpdate(
         req.params.id,
@@ -69,6 +81,10 @@ router.put('/:id', (req, res) => {
         }
     )
 });
+
+
+
+
 //
 // router.patch("/build/:id/:quantity", (req, res) => {
 //     Product.findByIdAndUpdate(

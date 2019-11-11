@@ -9,12 +9,29 @@
                 <% include ../partials/header.ejs %>
                 <% include ../partials/tabs.ejs %>
 
-                <h1>Solar Show Page</h1>
-                <%=solar.applianceName%>
-                <%=solar.watts%>watts.
+                <h3 class="solShowTitle">Your Calculated Watts</h3>
 
-                <nav>
-                    <a href="/solar">Back to Solar Index</a>
+                <br>
+                <p class="solarShow"><%=solar.applianceName%>: <br>
+                <% if (solar.watts){ %>
+                    <%=solar.watts%> watts. <br>
+                    <%=solar.voltage%>V <br>
+                    <%=solar.amps%>amps <br>
+
+                <%}
+                else{%>
+
+                    <%=solar.voltage%>V <br>
+                    <%=solar.amps%>amps <br>
+                    <% calcWatts = (solar.voltage * solar.amps)%>
+                    Your Calculated watts are: <span class=bold><%=calcWatts%>watts</span>
+                </p>
+
+                <%}%>
+
+
+                <nav class="solShowBtn">
+                    <button><a href="/solar">Back to my data table</a></button>
                 </nav>
             </div>
         </div>

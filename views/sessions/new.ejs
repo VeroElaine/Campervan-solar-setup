@@ -9,31 +9,27 @@
                 <% include ../partials/header.ejs %>
                 <% include ../partials/tabs.ejs %>
 
-                <div style="background-image: url('img/login.png');">
-                <style>
-                body{
-                    background-image: url("img/login.png");
-                    background-repeat: no-repeat;
-                }
-                </style>
-                <img src="img/login.png" alt="">
-                <h1>Log in</h1>
-                <%if(wrongInput){%>
-                        <span class="error">Username and Password do not match</span>
-                      <%}%>
-                        <form action="/sessions" method="POST">
-                            Username:<input type="text" name="username" /><br/>
-                            Password:<input type="password" name="password" /><br/>
-                            <!-- put in if statement that says username and password do not match -->
-                            <input type="submit" value="Log In">
-                        </form>
+                <div class="newUser">
+                    <div id="box" >
 
-                        <nav>
-                            <a href="/users/new">New User? Sign Up!</a>
-                        </nav>
+                    <h1>Log in</h1>
+                    <%if(wrongInput){%>
+                            <span class="error">Username and Password do not match</span>
+                          <%}%>
+                            <form action="/sessions" method="POST">
+                                Username:<input type="text" name="username" /><br/>
+                                Password:<input type="password" name="password" /><br/>
+                                <!-- put in if statement that says username and password do not match -->
+                                <input id="accountRegister" type="submit" value="Log In">
+                            </form>
+
+                            <nav >
+                                <a class="account" href="/users/new">New User? Sign Up!</a>
+                            </nav>
+                        </div>
                     </div>
                 </div>
-
+            </div>
         <footer id="footer">
             <% include ../partials/footer.ejs %>
         </footer>
