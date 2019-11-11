@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
     description: {type:String, required:true},
     username: {type: String, required:true},
     userid: {type:String, required:true}
-    
+
 });
 
 const Community = mongoose.model('Community', userSchema);
