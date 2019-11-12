@@ -78,6 +78,19 @@ body{
     text-shadow: 1px 1px 1px black;
 
 }
+
+.cardContainer2{
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+#setupImage{
+    margin-left: 15%;
+    margin-top: 10%;
+    /* margin-bottom: 15%; */
+
+}
+
 .logIn{
     margin-top: 15%;
 }
