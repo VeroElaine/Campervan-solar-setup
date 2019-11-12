@@ -57,5 +57,15 @@ router.put('/solar/chargecontrol', (req, res) => {
             });
         })
 
+        // creating route to add quantity and update price
+// router.patch("/soslar/build", (req, res) => {
+//     User.findByIdAndUpdate(
+//         {username:req.session.username},
+//         { $set: {price: req.body}},
+//         { new: true}, (error, updateQuantity) => {
+//             res.redirect("/solar");
+//         }
+//     )
+// })
 
 module.exports = router;

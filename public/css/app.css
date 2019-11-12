@@ -288,9 +288,11 @@ tr{
 
 #cardImage{
     position: relative;
-    width: 100%;
+    width: 95%;
     height: 100%;
     margin-top: 6%;
+    margin-left: 2.5%
+
 }
 
 
@@ -357,7 +359,7 @@ tr{
 }
 
 }
-#carouselText{
+.carouselText{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -370,8 +372,21 @@ tr{
     width: 70%;
     margin-left: 13%;
 }
+
+
 .carousel-caption{
     font-size: 30px;
+
+}
+#carousel-caption2{
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    background-color: rgba(0,0,1, 0.4);
+
 }
 #homeSignup a{
     text-decoration: none;
