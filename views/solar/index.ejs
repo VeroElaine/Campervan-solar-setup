@@ -87,6 +87,7 @@
                         <%totalWatts=solar[i].watts + totalWatts%>
                         <%wattHours=(solar[i].watts * solar[i].hourUsage) + wattHours%>
                         <% } %>
+                        
                         <p class="calculations">
                             Total Watts: <span class=bold><%=totalWatts + calcWatts%> Watts</span> <br>
                             Total Amp Hours for 12V System: <span class=bold><%=Math.ceil((wattHours + calcWattHours)/12)%> Amp hours</span> <br>
@@ -176,11 +177,13 @@
                               </div>
                             <!-- </div> -->
                     </div>
+                    <nav>
+                        <br> <br>
+                        <button type="button" class="btn btn-default btn-sm"><a href="/"><span class="glyphicon glyphicon-home"></span>Back to Home Page</a></button>
+                    </nav>
 
                 </div>
-                <nav>
-                    <button type="button" class="btn btn-default btn-sm"><a href="/"><span class="glyphicon glyphicon-home"></span>Back to Home Page</a></button>
-                </nav>
+
 
             </div>
         </div>

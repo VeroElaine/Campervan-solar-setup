@@ -19,13 +19,13 @@
                     <%=solar.amps%>amps <br>
 
                 <%}
-                else{%>
+                    else{%>
 
-                    <%=solar.voltage%>V <br>
-                    <%=solar.amps%>amps <br>
-                    <% calcWatts = (solar.voltage * solar.amps)%>
-                    Your Calculated watts are: <span class=bold><%=calcWatts%>watts</span>
-                </p>
+                        <%=solar.voltage%>V <br>
+                        <%=solar.amps%>amps <br>
+                        <% calcWatts = (solar.voltage * solar.amps)%>
+                        Your Calculated watts are: <span class=bold><%=calcWatts%>watts</span>
+                    </p>
 
                 <%}%>
 

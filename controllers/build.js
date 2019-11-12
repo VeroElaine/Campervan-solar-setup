@@ -2,12 +2,10 @@ const express = require('express');
 const User = require('../models/users.js');
 const router = express.Router();
 
-// router.get("/solar/build", (req, res) => {
-//
-// })
+
 
 router.put('/solar/battery', (req, res) => {
-    console.log(req.body);
+    //console.log(req.body);
     User.findOneAndUpdate(
         {username:req.session.username},
         {
@@ -20,7 +18,6 @@ router.put('/solar/battery', (req, res) => {
     })
 
 router.put('/solar/panels', (req, res) => {
-    console.log(req.body);
     User.findOneAndUpdate(
         {username:req.session.username},
         {
@@ -33,7 +30,6 @@ router.put('/solar/panels', (req, res) => {
 
 
 router.put('/solar/inverter', (req, res) => {
-    console.log(req.body);
     User.findOneAndUpdate(
         {username:req.session.username},
         {
@@ -45,7 +41,6 @@ router.put('/solar/inverter', (req, res) => {
         })
 
 router.put('/solar/chargecontrol', (req, res) => {
-    console.log(req.body);
     User.findOneAndUpdate(
         {username:req.session.username},
         {

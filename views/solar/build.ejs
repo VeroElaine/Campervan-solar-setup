@@ -143,7 +143,12 @@
                     </table>
                         <div class="cost">
                         <%total=foundUser.battery.price + foundUser.panels.price + foundUser.inverter.price + foundUser.chargecontrol.price%>
-                        Total= <span class="bold">$<%=total%></span>
+                        <%if(!total) { %>
+                             Total: $0
+                        <%}
+                            else{%>
+                                Total= <span class="bold">$<%=total%></span>
+                        <%}%>
                     </div>
                         <nav>
                             <br>
