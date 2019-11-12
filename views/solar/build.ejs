@@ -140,12 +140,13 @@
                             </tr>
                         </tbody>
                     </table>
-
+                        <div class="cost">
                         <%total=foundUser.battery.price + foundUser.panels.price + foundUser.inverter.price + foundUser.chargecontrol.price%>
                         Total= <span class="bold">$<%=total%></span>
+                    </div>
                         <nav>
                             <br>
-                            <button type="button" class="btn btn-default btn-sm"><a href="/solar"><span class="glyphicon glyphicon-flash"></span>Back to my data table</a></button>
+                            <button id="kitCost" type="button" class="btn btn-default btn-sm"><a href="/solar"><span class="glyphicon glyphicon-flash"></span>Back to my data table</a></button>
                         </nav>
                 </div>
 

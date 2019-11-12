@@ -455,6 +455,15 @@ tr{
     text-align: center;
     /* margin-left: 12%; */
 }
+.cost{
+    text-align: center;
+    font-size: 18px;
+}
+#kitCost{
+    justify-content: center;
+    align-items: center;
+    margin-left: 45%;
+}
 
 #container{
     min-height: 100%
