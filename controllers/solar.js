@@ -11,11 +11,12 @@ router.get('/build', (req, res) => {
     if(req.session.username){
         User.findOne({
             username:req.session.username}, (error, foundUser) => {
-                
+
                 Solar.find({userid:req.session.userid}, (error, allSolar) => {
                     res.render('solar/build.ejs',{
                         username:req.session.username,
                         foundUser:foundUser
+                        // console.log(foundUser);
 
                     })
                 })

@@ -29,12 +29,14 @@
                             <tr>
                                 <td>Battery</td>
                                 <td>
-                                    <div class="build-edit">
-                                        <button><a href="/solar/battery">Choose Battery</a></button>
+                                    <% if(foundUser.battery.part){ %>
                                         <%=foundUser.battery.part%>
 
-                                        <!-- <form action="/solar/battery" method="POST">
-                                        <button type="submit" id="edit"class="btn btn-default btn-md">EDIT</button> -->
+                                        <% } else { %>
+                                            <div class="build-edit">
+                                                <button><a href="/solar/battery">Choose Battery</a></button>
+                                                <%}%>
+
                                     </div>
                                  </td>
                                 <td>$<%=foundUser.battery.price%></td>
@@ -54,8 +56,13 @@
                             <tr>
                                 <td>Solar Panels</td>
                                 <td>
-                                    <button><a href="/solar/panels">Choose Panels</a></button>
-                                    <%=foundUser.panels.part%>
+                                    <% if(foundUser.panels.part){ %>
+                                        <%=foundUser.panels.part%>
+
+                                        <% } else { %>
+                                            <div class="build-edit">
+                                                <button><a href="/solar/panels">Choose Solar Panels</a></button>
+                                                <%}%>
                                 </td>
 
                                 <td>$<%=foundUser.panels.price%></td>
@@ -75,8 +82,13 @@
                             <tr>
                                 <td>Inverter</td>
                                 <td>
-                                    <button><a href="/solar/inverter">Choose Inverter</a></button>
-                                    <%=foundUser.inverter.part%>
+                                    <% if(foundUser.inverter.part){ %>
+                                        <%=foundUser.inverter.part%>
+
+                                        <% } else { %>
+                                            <div class="build-edit">
+                                                <button><a href="/solar/inverter">Choose Inverter</a></button>
+                                                <%}%>
                                 </td>
                                 <td>$<%=foundUser.inverter.price%></td>
                                 <td>
@@ -95,9 +107,13 @@
                             <tr>
                                 <td>Charge Control</td>
                                 <td>
-                                    <button><a href="/solar/chargecontrol">Choose Charge Control</a></button>
-                                    <%=foundUser.chargecontrol.part%>
+                                    <% if(foundUser.chargecontrol.part){ %>
+                                        <%=foundUser.chargecontrol.part%>
 
+                                        <% } else { %>
+                                            <div class="build-edit">
+                                                <button><a href="/solar/chargecontrol">Choose Charge Controller</a></button>
+                                                <%}%>
                                  </td>
 
                                 <td>$<%=foundUser.chargecontrol.price%></td>
@@ -117,6 +133,8 @@
                         </tbody>
                     </table>
 
+                        <%total=foundUser.battery.price + foundUser.panels.price + foundUser.inverter.price + foundUser.chargecontrol.price%>
+                        Total= <span class="bold">$<%=total%></span>
                 </div>
 
                 <nav>
