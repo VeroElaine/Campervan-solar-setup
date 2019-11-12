@@ -20,7 +20,7 @@
                                 <th>Part</th>
                                 <th>Select</th>
                                 <th>Price</th>
-                                <th>(add/subtract)</th>
+                                <th>Quanitity</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -31,6 +31,7 @@
                                 <td>
                                     <% if(foundUser.battery.part){ %>
                                         <%=foundUser.battery.part%>
+                                        <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery"><span class="glyphicon glyphicon-edit"></span>Change</button>
 
                                         <% } else { %>
                                             <div class="build-edit">
@@ -41,7 +42,8 @@
                                  </td>
                                 <td>$<%=foundUser.battery.price%></td>
                                 <td>
-                                    <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery"><span class="glyphicon glyphicon-edit"></span> EDIT</button>
+                                    <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">+</button>
+                                    <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">-</button>
                                 </td>
                                 <td>
                                     <form action="/solar/build/battery?_method=DELETE" method="POST">
@@ -58,6 +60,7 @@
                                 <td>
                                     <% if(foundUser.panels.part){ %>
                                         <%=foundUser.panels.part%>
+                                        <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/panels"><span class="glyphicon glyphicon-edit"></span>Change</button>
 
                                         <% } else { %>
                                             <div class="build-edit">
@@ -67,7 +70,8 @@
 
                                 <td>$<%=foundUser.panels.price%></td>
                                 <td>
-                                    <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/panels"><span class="glyphicon glyphicon-edit"></span> EDIT</button>
+                                    <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/panels">+</button>
+                                        <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/panels">-</button>
                                 </td>
                                 <td>
                                     <form action="/solar/build/panels?_method=DELETE" method="POST">
@@ -84,6 +88,7 @@
                                 <td>
                                     <% if(foundUser.inverter.part){ %>
                                         <%=foundUser.inverter.part%>
+                                        <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery"><span class="glyphicon glyphicon-edit"></span>Change</button>
 
                                         <% } else { %>
                                             <div class="build-edit">
@@ -92,7 +97,8 @@
                                 </td>
                                 <td>$<%=foundUser.inverter.price%></td>
                                 <td>
-                                    <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery"><span class="glyphicon glyphicon-edit"></span> EDIT</button>
+                                    <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">+</button>
+                                        <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">-</button>
                                 </td>
                                 <td>
                                     <form action="/solar/?_method=DELETE" method="POST">
@@ -109,6 +115,7 @@
                                 <td>
                                     <% if(foundUser.chargecontrol.part){ %>
                                         <%=foundUser.chargecontrol.part%>
+                                        <button type="submit" id="edit" class="btn btn-default btn-md"><a href="/solar/battery"><span class="glyphicon glyphicon-edit"></span> EDIT</button>
 
                                         <% } else { %>
                                             <div class="build-edit">
@@ -118,7 +125,8 @@
 
                                 <td>$<%=foundUser.chargecontrol.price%></td>
                                 <td>
-                                    <button type="submit" id="edit" class="btn btn-default btn-md"><a href="/solar/battery"><span class="glyphicon glyphicon-edit"></span> EDIT</button>
+                                    <button type="submit" id="edit" class="btn btn-default btn-md"><a href="/solar/battery">+</button>
+                                        <button type="submit" id="edit" class="btn btn-default btn-md"><a href="/solar/battery">-</button>
                                 </td>
                                 <td>
                                     <form action="/solar/?_method=DELETE" method="POST">
