@@ -9,11 +9,11 @@
                 <% include ../partials/header.ejs %>
                 <% include ../partials/tab2.ejs %>
 
-                <h1>Build Page</h1>
-                <div class="container">
                     <!-- <p>Are you new to building solar-kits? Check out this battery guide!</p> -->
+                    <div class="jumbotron text-center">
                     <h2>Build My Kit</h2>
                     <p>Learn how much each item costs and have the option to buy</p>
+                </div>
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -88,7 +88,7 @@
                                 <td>
                                     <% if(foundUser.inverter.part){ %>
                                         <%=foundUser.inverter.part%>
-                                        <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery"><span class="glyphicon glyphicon-edit"></span>Change</button>
+                                        <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/inverter"><span class="glyphicon glyphicon-edit"></span>Change</button>
 
                                         <% } else { %>
                                             <div class="build-edit">
@@ -115,7 +115,7 @@
                                 <td>
                                     <% if(foundUser.chargecontrol.part){ %>
                                         <%=foundUser.chargecontrol.part%>
-                                        <button type="submit" id="edit" class="btn btn-default btn-md"><a href="/solar/battery"><span class="glyphicon glyphicon-edit"></span> EDIT</button>
+                                        <button type="submit" id="edit" class="btn btn-default btn-md"><a href="/solar/chargecontrol"><span class="glyphicon glyphicon-edit"></span> EDIT</button>
 
                                         <% } else { %>
                                             <div class="build-edit">
@@ -143,13 +143,15 @@
 
                         <%total=foundUser.battery.price + foundUser.panels.price + foundUser.inverter.price + foundUser.chargecontrol.price%>
                         Total= <span class="bold">$<%=total%></span>
+                        <nav>
+                            <br>
+                            <button type="button" class="btn btn-default btn-sm"><a href="/solar"><span class="glyphicon glyphicon-flash"></span>Back to my data table</a></button>
+                        </nav>
                 </div>
 
-                <nav>
-                    <button type="button" class="btn btn-default btn-sm"><a href="/solar"><span class="glyphicon glyphicon-flash"></span>Back to my data table</a></button>
-                </nav>
-            </div>
-        </div>
+
+            <!-- </div>
+        </div> -->
 
         <footer id="footer">
             <% include ../partials/footer.ejs %>
