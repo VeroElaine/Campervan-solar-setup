@@ -142,6 +142,7 @@
                         </tbody>
                     </table>
                         <div class="cost">
+                            <!-- write if statement to check if number then add it -->
                         <%total=foundUser.battery.price + foundUser.panels.price + foundUser.inverter.price + foundUser.chargecontrol.price%>
                         <%if(!total) { %>
                              Total: $0
@@ -155,10 +156,6 @@
                             <button id="kitCost" type="button" class="btn btn-default btn-sm"><a href="/solar"><span class="glyphicon glyphicon-flash"></span>Back to my data table</a></button>
                         </nav>
                 </div>
-
-
-            <!-- </div>
-        </div> -->
 
         <footer id="footer">
             <% include ../partials/footer.ejs %>
