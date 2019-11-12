@@ -8,20 +8,25 @@
             <div id="main">
                 <% include ../partials/header.ejs %>
                 <% include ../partials/tab4.ejs %>
-                <h1>Edit community Page</h1>
-                <form action="/community/<%=community.id%>?_method=PUT" method="POST">
-                    Name: <input type="text" name="name" value="<%=community.name%>"/><br/>
-                    Image: <input type="text" name="image" value="<%=community.image%>" /><br/>
-                    Description: <input type="textarea" name="description" value="<%=community.description%>"/>
+                <div class="newUser">
+                    <div id="box" >
+                            <h1>Edit Your Post</h1>
+                            <form action="/community/<%=community.id%>?_method=PUT" method="POST">
+                                Name: <input id="userText" type="text" name="name" value="<%=community.name%>"/><br/>
+                                Image: <input id="userText" type="text" name="image" value="<%=community.image%>" /><br/>
+                                Description: <input id="userText" type="textarea" name="description" value="<%=community.description%>"/>
 
-                    <br/>
-                    <input type="submit" value="Submit Changes">
-                <form>
-                    <nav>
-                        <a href="/community">Back to Community Posts</a>
-                    </nav>
-            </div>
-        </div>
+                                <br/>
+                                <input id="accountRegister"type="submit" value="Submit Changes">
+                            <form>
+                                <nav>
+                                    <a href="/community">Back to Community Posts</a>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
 
     <footer id="footer">
         <% include ../partials/footer.ejs %>

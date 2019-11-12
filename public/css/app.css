@@ -17,16 +17,7 @@ body{
     /* background-image: url("https://i.imgur.com/qcnHBd5.png"); */
     height: 100%;
 }
-.newUser{
-    background-image: url("https://i.imgur.com/hLgCDAt.png");
-    /* background-repeat: no-repeat; */
-    background-size: cover;
-    /* -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover; */
-    height: 1000px;
-    /* width: 100%; */
-}
+
 .headTitle{
     text-shadow: 2px 2px black;
 }
@@ -58,13 +49,22 @@ body{
 #box{
     background-color: rgba(5,4,2,0.1);
     width: 34%;;
-    height: 40%;
+    height: 45%;
     margin-left:auto;
     margin-right:auto;
     /* margin-top: 30%; */
     padding: 15px;
     color:white;
     text-align: center;
+    /* padding-top: 5%; */
+
+
+}
+.newUser{
+    background-image: url("https://i.imgur.com/hLgCDAt.png");
+    background-size: cover;
+    height: 1000px;
+    padding-top: 10%;
 
 }
 .username{
