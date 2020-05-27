@@ -37,7 +37,15 @@
                                                 <%}%>
                                     </div>
                                  </td>
-                                <td>$<%=foundUser.battery.price%></td>
+                                <td>
+                                    <% if(!foundUser.battery.price){ %>
+                                        <% foundUser.battery.price = 0 %>
+                                        $<%=foundUser.battery.price%>
+                                    <% } else { %>
+                                        $<%=foundUser.battery.price%>
+                                    <%}%>
+
+                                </td>
                                 <td>
                                     <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">+</button>
                                     <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">-</button>
@@ -64,7 +72,14 @@
                                                 <%}%>
                                 </td>
 
-                                <td>$<%=foundUser.panels.price%></td>
+                                <td>
+                                    <% if(!foundUser.panels.price){ %>
+                                        <% foundUser.panels.price = 0 %>
+                                        $<%=foundUser.panels.price%>
+                                    <% } else { %>
+                                        $<%=foundUser.panels.price%>
+                                    <%}%>
+                                </td>
                                 <td>
                                     <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/panels">+</button>
                                     <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/panels">-</button>
@@ -91,7 +106,14 @@
                                                 <button><a href="/solar/inverter">Choose Inverter</a></button>
                                                 <%}%>
                                 </td>
-                                <td>$<%=foundUser.inverter.price%></td>
+                                <td>
+                                    <% if(!foundUser.inverter.price){ %>
+                                        <% foundUser.inverter.price = 0 %>
+                                        $<%=foundUser.inverter.price%>
+                                    <% } else { %>
+                                        $<%=foundUser.inverter.price%>
+                                    <%}%>
+                                </td>
                                 <td>
                                     <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">+</button>
                                     <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">-</button>
@@ -119,7 +141,14 @@
                                                 <%}%>
                                  </td>
 
-                                <td>$<%=foundUser.chargecontrol.price%></td>
+                                <td>
+                                    <% if(!foundUser.chargecontrol.price){ %>
+                                        <% foundUser.chargecontrol.price = 0 %>
+                                        $<%=foundUser.chargecontrol.price%>
+                                    <% } else { %>
+                                        $<%=foundUser.chargecontrol.price%>
+                                    <%}%>
+                                </td>
                                 <td>
                                     <button type="submit" id="edit" class="btn btn-default btn-md"><a href="/solar/battery">+</button>
                                     <button type="submit" id="edit" class="btn btn-default btn-md"><a href="/solar/battery">-</button>
