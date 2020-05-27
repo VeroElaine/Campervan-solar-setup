@@ -8,13 +8,10 @@
             <div id="main">
                 <% include ../partials/header.ejs %>
                 <% include ../partials/tab2.ejs %>
-
-                    <!-- <p>Are you new to building solar-kits? Check out this battery guide!</p> -->
                     <div class="jumbotron text-center">
                     <h2>Build My Kit</h2>
                     <p>Learn how much each item costs and have the option to buy</p>
                 </div>
-                *(currently still working on quantitiy and delete buttons for this page.<br> Quantity will say how many you added and update the price)
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -38,7 +35,6 @@
                                             <div class="build-edit">
                                                 <button><a href="/solar/battery">Choose Battery</a></button>
                                                 <%}%>
-
                                     </div>
                                  </td>
                                 <td>$<%=foundUser.battery.price%></td>
@@ -62,7 +58,6 @@
                                     <% if(foundUser.panels.part){ %>
                                         <%=foundUser.panels.part%>
                                         <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/panels"><span class="glyphicon glyphicon-edit"></span>Change</button>
-
                                         <% } else { %>
                                             <div class="build-edit">
                                                 <button><a href="/solar/panels">Choose Solar Panels</a></button>
@@ -72,7 +67,7 @@
                                 <td>$<%=foundUser.panels.price%></td>
                                 <td>
                                     <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/panels">+</button>
-                                        <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/panels">-</button>
+                                    <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/panels">-</button>
                                 </td>
                                 <td>
                                     <form action="/solar/build/panels?_method=DELETE" method="POST">
@@ -99,7 +94,7 @@
                                 <td>$<%=foundUser.inverter.price%></td>
                                 <td>
                                     <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">+</button>
-                                        <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">-</button>
+                                    <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">-</button>
                                 </td>
                                 <td>
                                     <form action="/solar/?_method=DELETE" method="POST">
@@ -116,7 +111,7 @@
                                 <td>
                                     <% if(foundUser.chargecontrol.part){ %>
                                         <%=foundUser.chargecontrol.part%>
-                                        <button type="submit" id="edit" class="btn btn-default btn-md"><a href="/solar/chargecontrol"><span class="glyphicon glyphicon-edit"></span> EDIT</button>
+                                        <button type="submit" id="edit" class="btn btn-default btn-md"><a href="/solar/chargecontrol"><span class="glyphicon glyphicon-edit"></span> Change</button>
 
                                         <% } else { %>
                                             <div class="build-edit">
@@ -127,7 +122,7 @@
                                 <td>$<%=foundUser.chargecontrol.price%></td>
                                 <td>
                                     <button type="submit" id="edit" class="btn btn-default btn-md"><a href="/solar/battery">+</button>
-                                        <button type="submit" id="edit" class="btn btn-default btn-md"><a href="/solar/battery">-</button>
+                                    <button type="submit" id="edit" class="btn btn-default btn-md"><a href="/solar/battery">-</button>
                                 </td>
                                 <td>
                                     <form action="/solar/?_method=DELETE" method="POST">

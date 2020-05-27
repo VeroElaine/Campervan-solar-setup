@@ -10,8 +10,6 @@ router.post('/', (req, res) => {
     let newCommunity = {username:req.session.username, userid:req.session.userid, name:req.body.name, description:req.body.description}
     Community.create(newCommunity, (error, createdCommunity) => {
         res.redirect('/community')
-        console.log(error);
-        console.log(createdCommunity);
     });
 });
 

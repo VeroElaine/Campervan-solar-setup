@@ -23,7 +23,7 @@ router.get('/build', (req, res) => {
             })
 
         }else {
-               res.redirect('/');
+               res.redirect('../users/new');
            }
     });
 
@@ -123,7 +123,7 @@ router.get('/', (req, res) => {
             );
         })
     } else {
-        res.redirect('/');
+        res.redirect('../users/new');
     }
     // res.render("solar/index.ejs")
 });
