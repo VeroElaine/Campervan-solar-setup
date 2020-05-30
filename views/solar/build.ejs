@@ -50,7 +50,12 @@
 
                                 </td>
                                 <td>
-                                    <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">+</button>
+                                    <button type="submit" id="edit"class="btn btn-default btn-md">+</button>
+                                        <% if(!foundUser.battery.part){ %>
+                                            0
+                                         <% } else { %>
+                                             1 
+                                         <%}%>
                                     <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">-</button>
                                 </td>
                                 <td>
@@ -84,7 +89,12 @@
                                     <%}%>
                                 </td>
                                 <td>
-                                    <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/panels">+</button>
+                                    <button type="submit" id="edit"class="btn btn-default btn-md">+</button>
+                                    <% if(!foundUser.panels.part){ %>
+                                       0
+                                    <% } else { %>
+                                        1
+                                    <%}%>
                                     <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/panels">-</button>
                                 </td>
                                 <td>
@@ -118,7 +128,12 @@
                                     <%}%>
                                 </td>
                                 <td>
-                                    <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">+</button>
+                                    <button type="submit" id="edit"class="btn btn-default btn-md">+</button>
+                                    <% if(!foundUser.inverter.part){ %>
+                                        0
+                                     <% } else { %>
+                                         1 
+                                     <%}%>
                                     <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery">-</button>
                                 </td>
                                 <td>
@@ -153,7 +168,12 @@
                                     <%}%>
                                 </td>
                                 <td>
-                                    <button type="submit" id="edit" class="btn btn-default btn-md"><a href="/solar/battery">+</button>
+                                    <button type="submit" id="edit" class="btn btn-default btn-md">+</button>
+                                    <% if(!foundUser.chargecontrol.price){ %>
+                                        0
+                                    <% } else { %>
+                                        1
+                                    <%}%>
                                     <button type="submit" id="edit" class="btn btn-default btn-md"><a href="/solar/battery">-</button>
                                 </td>
                                 <td>
