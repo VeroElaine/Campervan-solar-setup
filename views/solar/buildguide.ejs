@@ -6,7 +6,11 @@
     <body>
         <div id="container">
             <div id="main">
-                <% include ../partials/header.ejs %>
+              <% if(foundUser) {%>
+                <% include ../partials/headerLoggedIn.ejs %>
+             <%} else { %>
+                <% include ../partials/headerSignUp.ejs %>
+               <% } %>
                 <% include ../partials/tab3.ejs %>
             <div class="jumbotron text-center">
               <h1>The Solar Panel System</h1>
@@ -16,20 +20,20 @@
               <div class="row">
                 <div class="col-sm-4">
                   <h3>What Does All This Stuff Do?</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                  <p>Solar panels are meant to replace old-school generators and help you truly live off-grid in your campervan</p>
+                  <p>Click around the site to learn about the individual components</p>
                   <a target="_blank" href="https://gnomadhome.com/van-build-solar-electrical-wiring/#What_Does_All_This_Stuff_Do" class="btn btn-primary">Learn More</a>
                 </div>
                 <div class="col-sm-4">
                   <h3>How to Size your Camper Van Electrical System</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                  <p>It's important to know your daily electrical usage. That's why I've built the table for you to input your applicances.</p>
+                  <p>From there you can get an estimated battery bank without the all the hassle! Click the link to learn more</p>
                   <a target="_blank" href="https://www.explorist.life/diy-campervan-solar/" class="btn btn-primary">Learn More</a>
                 </div>
                 <div class="col-sm-4">
                   <h3>Choosing Solar Panels and Batteries</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                  <p>Once you've figured out your battery bank, all there is know is to choose your brands</p>
+                  <p>You can click here to learn more about how to wire your solar panels</p>
                   <a target="_blank" href="https://gnomadhome.com/van-build-solar-electrical-wiring/#Choosing_Solar_Panels_and_Batteries" class="btn btn-primary">Learn More</a>
                 </div>
               </div>
@@ -39,20 +43,20 @@
                   <div class="row">
                     <div class="col-sm-4">
                       <h3>Series VS Parallel</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                      <p>When the components are connected in series they all share the same current whereas, in parallel circuits, components are connected in parallel so that they all have the same potential difference between them</p>
+                      <p>Click on the link to learn more about the differences</p>
                       <a target="_blank" href="https://www.explorist.life/solar-panels-series-vs-parallel/" class="btn btn-primary">Learn More</a>
                     </div>
                     <div class="col-sm-4">
                       <h3>How to Install a Battery Monitor </h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                      <p>A Battery monitor sits in-line between your batteries and ALL loads of your electrical system.</p>
+                      <p>Click on the link to learn more on how to install a battery monitor</p>
                       <a target="_blank" href="https://www.explorist.life/how-to-install-a-diy-camper-van-solar-battery-monitor/" class="btn btn-primary">Learn More</a>
                     </div>
                     <div class="col-sm-4">
                       <h3>Lithium vs AGM</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                      <p>Lithium is by far lighter and has a greater load, however, it is a steeper price</p>
+                      <p>Click on the link to learn more about the differences between Lithium and AGM</p>
                       <a target="_blank" href="https://www.victronenergy.com/blog/2015/03/30/batteries-lithium-ion-vs-agm/" class="btn btn-primary">Learn More</a>
                     </div>
                   </div>

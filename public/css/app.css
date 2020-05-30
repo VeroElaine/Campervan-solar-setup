@@ -166,6 +166,13 @@ input#submit{
 .buildSolar{
     margin-left: 10%;
 }
+
+.editSolarPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .table{
     margin-top: 4%;
 }
@@ -349,6 +356,9 @@ tr{
 }
 .community{
     text-align: center;
+}
+#communityPostDel{
+    color: red;
 }
 #text{
     position: absolute;

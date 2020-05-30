@@ -11,13 +11,10 @@ router.get('/build', (req, res) => {
     if(req.session.username){
         User.findOne({
             username:req.session.username}, (error, foundUser) => {
-
                 Solar.find({userid:req.session.userid}, (error, allSolar) => {
                     res.render('solar/build.ejs',{
                         username:req.session.username,
                         foundUser:foundUser
-                        // console.log(foundUser);
-
                     })
                 })
             })
@@ -29,27 +26,57 @@ router.get('/build', (req, res) => {
 
 
 router.get('/battery', (req, res) => {
-    res.render('solar/battery.ejs');
+    Solar.find({userid:req.session.userid}, (error, foundUser) => {
+        res.render('solar/battery.ejs',{
+            username:req.session.username,
+            foundUser:foundUser
+        })
+    })
 });
 
 router.get('/panels', (req, res) => {
-    res.render('solar/panels.ejs');
+    Solar.find({userid:req.session.userid}, (error, foundUser) => {
+        res.render('solar/panels.ejs',{
+            username:req.session.username,
+            foundUser:foundUser
+        })
+    })
 });
 
 router.get('/inverter', (req, res) => {
-    res.render('solar/inverter.ejs');
+    Solar.find({userid:req.session.userid}, (error, foundUser) => {
+        res.render('solar/inverter.ejs',{
+            username:req.session.username,
+            foundUser:foundUser
+        })
+    })
 });
 
 router.get('/chargecontrol', (req, res) => {
-    res.render('solar/chargecontrol.ejs');
+    Solar.find({userid:req.session.userid}, (error, foundUser) => {
+        res.render('solar/chargecontrol.ejs',{
+            username:req.session.username,
+            foundUser:foundUser
+        })
+    })
 });
 
 router.get('/buildguide', (req, res) => {
-    res.render('solar/buildguide.ejs');
-});
+    Solar.find({userid:req.session.userid}, (error, foundUser) => {
+        res.render('solar/buildguide.ejs',{
+            username:req.session.username,
+            foundUser:foundUser
+        })
+    })
+}); 
 
-router.get('/communitybuilds', (req, res) => {
-    res.render('solar/communitybuilds.ejs');
+router.get('/communitybuilds', (req, res) => { 
+    Solar.find({userid:req.session.userid}, (error, foundUser) => {
+        res.render('solar/communitybuilds.ejs',{
+            username:req.session.username,
+            foundUser:foundUser
+        })
+    })
 });
 
 router.get('/:id/edit', (req, res) => {
@@ -77,8 +104,6 @@ router.get('/:id', (req, res) => {
     });
 });
 
-
-
 router.put('/:id', (req, res) => {
     Solar.findByIdAndUpdate(
         req.params.id,
@@ -91,18 +116,6 @@ router.put('/:id', (req, res) => {
 });
 
 
-
-
-//
-// router.patch("/build/:id/:quantity", (req, res) => {
-//     Product.findByIdAndUpdate(
-//         req.params.id,
-//         { $set: {quantity: req.params.quantity}},
-//         { new: true}, (error, updateModel) => {
-//             res.redirect("/build");
-//         }
-//     )
-// })
 router.post('/', (req, res) => {
     let newSolar = {applianceName:req.body.applianceName, watts:req.body.watts, voltage:req.body.voltage, amps:req.body.amps, hourUsage:req.body.hourUsage, username:req.session.username, userid:req.session.userid}
     Solar.create(newSolar, (error, createdSolar) => {
@@ -125,7 +138,6 @@ router.get('/', (req, res) => {
     } else {
         res.redirect('../users/new');
     }
-    // res.render("solar/index.ejs")
 });
 
 module.exports = router;

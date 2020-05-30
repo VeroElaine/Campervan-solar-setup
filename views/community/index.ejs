@@ -6,7 +6,11 @@
     <body>
         <div id="container">
             <div id="main">
-                <% include ../partials/header.ejs %>
+                <% if(!community) {%>
+                    <% include ../partials/headerLoggedIn.ejs %>
+                 <%} else { %>
+                    <% include ../partials/headerSignUp.ejs %>
+                   <% } %>
                 <% include ../partials/tab4.ejs %>
                 <div class="community">
                     <div class="jumbotron text-center">
@@ -21,7 +25,6 @@
 
                     <% for(let i = 0; i < community.length; i++){ %>
                             <div class="card" >
-                                <!-- <div class="col s12 m4"> -->
                                 <div class="cardCommunityImage">
                                     <img class="card-img-top" src="<%=community[i].image%>" alt="<%=community[i].name%>'s image">
                                 </div>
@@ -31,14 +34,9 @@
                                                 <%=community[i].name%></h5>
                                             <p class="cardCommunityText">
                                                 Design Comments: <%=community[i].description%>.</p>
-
-                                        <!-- </div> -->
                                         </div>
-
                                     </div>
                                 </div>
-                            <!-- </div> -->
-
                     <% } %>
                 </div>
             </div>

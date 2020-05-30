@@ -6,7 +6,7 @@
     <body>
         <div id="container">
             <div id="main">
-                <% include ../partials/header.ejs %>
+                <% include ../partials/headerLoggedIn.ejs %>
                 <% include ../partials/tab4.ejs %>
                 <div class="newUser">
                     <div id="box" >
@@ -15,7 +15,7 @@
                         Description: <%=community.description%> <br><br>
                         <button><a href="/community/<%=community.id%>/edit">Edit</a></button> <br><br>
                         <form action="/community/<%=community.id%>?_method=DELETE" method="POST">
-                            <input type="submit" value="DELETE"/>
+                            <input id="communityPostDel" type="submit" value="DELETE"/>
                         </form> </br><br>
 
                         <nav>

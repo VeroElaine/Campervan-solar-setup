@@ -5,7 +5,6 @@ const router = express.Router();
 
 
 router.put('/solar/battery', (req, res) => {
-    //console.log(req.body);
     User.findOneAndUpdate(
         {username:req.session.username},
         {

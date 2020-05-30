@@ -1,9 +1,23 @@
 const express = require('express');
 const Community = require('../models/communitybuilds.js');
+const User = require("../models/users.js");
 const router = express.Router();
 
 router.get('/new', (req, res) => {
-    res.render('community/new.ejs')
+    if(req.session.username){
+        User.findOne({
+            username:req.session.username}, (error, foundUser) => {
+                Community.find({userid:req.session.userid}, (error, allCommunity) => {
+                    res.render('community/new.ejs',{
+                        username:req.session.username,
+                        community:allCommunity
+                    })
+                })
+            })
+
+        }else {
+               res.redirect('../users/new');
+           }
 });
 
 router.post('/', (req, res) => {
@@ -15,19 +29,15 @@ router.post('/', (req, res) => {
 
 
 router.get('/', (req, res) => {
-    // if(req.session.username){
         Community.find({}, (error, allCommunity) => {
             res.render(
                 'community/index.ejs',
                 {
                     community:allCommunity,
-                    // username:req.session.username
+                    username:req.session.username
                 }
             );
         })
-    // } else {
-    //     res.redirect('/');
-    // }
 });
 
 

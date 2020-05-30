@@ -6,7 +6,11 @@
     <body>
         <div id="container">
             <div id="main">
-                <% include ../partials/header.ejs %>
+                <% if(foundUser) {%>
+                    <% include ../partials/headerLoggedIn.ejs %>
+                 <%} else { %>
+                    <% include ../partials/headerSignUp.ejs %>
+                   <% } %>
                 <% include ../partials/tab2.ejs %>
                     <div class="jumbotron text-center">
                     <h2>Build My Kit</h2>
@@ -30,7 +34,6 @@
                                     <% if(foundUser.battery.part){ %>
                                         <%=foundUser.battery.part%>
                                         <button type="submit" id="edit"class="btn btn-default btn-md"><a href="/solar/battery"><span class="glyphicon glyphicon-edit"></span>Change</button>
-
                                         <% } else { %>
                                             <div class="build-edit">
                                                 <button><a href="/solar/battery">Choose Battery</a></button>

@@ -6,7 +6,11 @@
     <body>
         <div id="container">
             <div id="main">
-                <% include ../partials/header.ejs %>
+                 <% if(foundUser) {%>
+                    <% include ../partials/headerLoggedIn.ejs %>
+                 <%} else { %>
+                    <% include ../partials/headerSignUp.ejs %>
+                   <% } %>
                 <% include ../partials/tab2.ejs %>
                 <div class="jumbotron text-center">
 
@@ -127,6 +131,7 @@
                 <nav>
                     <button type="button" class="btn btn-default btn-sm"><a href="/solar"><span class="glyphicon glyphicon-flash"></span>Back to my data table</a></button> <br>
                 </nav>
+                <br>
                 <nav>
                     <button type="button" class="btn btn-default btn-sm"><a href="/solar/build"><span class="glyphicon glyphicon-shopping-cart"></span>Back to My Build Cart</a></button>
                 </nav>

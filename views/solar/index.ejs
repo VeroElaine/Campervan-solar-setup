@@ -6,7 +6,11 @@
     <body>
         <div id="container">
             <div id="main">
-                <% include ../partials/header.ejs %>
+              <% if(solar) {%>
+                <% include ../partials/headerLoggedIn.ejs %>
+             <%} else { %>
+                <% include ../partials/headerSignUp.ejs %>
+               <% } %>
                 <% include ../partials/tab2.ejs %>
                 <div class="jumbotron text-center">
                 <h1>My Appliance Data</h1>
@@ -179,11 +183,10 @@
                     </div>
                     <nav>
                         <br> <br>
-                        <button type="button" class="btn btn-default btn-sm"><a href="/"><span class="glyphicon glyphicon-home"></span>Back to Home Page</a></button>
+                        <button type="button" class="btn btn-default btn-sm"><a href="/"><span class="glyphicon glyphicon-road"></span> Back to Home Page</a></button>
                     </nav>
 
                 </div>
-
 
             </div>
         </div>
