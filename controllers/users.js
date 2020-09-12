@@ -7,7 +7,7 @@ const User = require('../models/users.js');
 router.get('/new', (req, res) => {
     res.render('users/new.ejs', {
         usernameTaken:false
-    });
+    }); 
 
 });
 
